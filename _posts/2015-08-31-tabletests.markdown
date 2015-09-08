@@ -123,4 +123,4 @@ See the next [post][tabletests] in the series for a deeper dive into how the pac
 
 [tabletest]: https://github.com/horia141/tabletest
 [tabletest3]: https://github.com/horia141/tabletest3
-[tabletests]: /jekyll/update/2015/08/31/tabletests.html
+[tabletests]: /jekyll/update/2015/09/08/how-tabletest-works
