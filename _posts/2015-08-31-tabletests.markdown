@@ -119,8 +119,8 @@ class ParseBin(tabletest.TableTestCase):
 
 There you go! The best of both worlds.
 
-See the next [post][tabletests] in the series for a deeper dive into how the package actually works.
+See the next [post][how-tabletest-works] in the series for a deeper dive into how the package actually works.
 
 [tabletest]: https://github.com/horia141/tabletest
 [tabletest3]: https://github.com/horia141/tabletest3
-[tabletests]: /jekyll/update/2015/09/08/how-tabletest-works
+[how-tabletest-works]: /jekyll/update/2015/09/08/how-tabletest-works.html
