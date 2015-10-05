@@ -6,9 +6,10 @@ description: >
   software engineering and computer science topics. The usual suspects, 
   I suppose.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://horia141.github.io"
+url: "https://horia141.com"
 github_username: horia141
 linkedin_username: horia141
+permalink: ":title.html"
 
 # Build settings
 markdown: kramdown

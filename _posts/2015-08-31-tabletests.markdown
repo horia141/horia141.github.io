@@ -2,7 +2,7 @@
 layout: post
 title: "Tabletests"
 date: 2015-08-31 20:20:05
-categories: jekyll update
+categories: post
 tags: python tabletest unittest testing
 comments: true
 ---
@@ -134,4 +134,4 @@ Usage should be straightforward and surprise free. For more info, tune in to the
 
 [tabletest]: https://github.com/horia141/tabletest
 [tabletest3]: https://github.com/horia141/tabletest3
-[how-tabletest-works]: /jekyll/update/2015/09/08/how-tabletest-works.html
+[how-tabletest-works]: {% post_url 2015-09-08-how-tabletest-works %}
