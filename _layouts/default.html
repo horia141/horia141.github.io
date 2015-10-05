@@ -10,12 +10,15 @@
     <div class="page-content">
       <div class="wrapper">
         {{ content }}
+
+        {% include disqus-dom.html %}
       </div>
     </div>
 
     {% include footer.html %}
 
-    {% include analytics.html %}
+    {% include analytics-js.html %}
+    {% include disqus-js.html %}
 
   </body>
 

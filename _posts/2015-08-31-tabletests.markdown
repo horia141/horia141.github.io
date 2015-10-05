@@ -4,6 +4,7 @@ title: "Tabletests"
 date: 2015-08-31 20:20:05
 categories: jekyll update
 tags: python tabletest unittest testing
+comments: true
 ---
 This article is an introduction and justification for [tabletest][tabletest] and [tabletest3][tabletest3]. These are small Python and Python3 (respectively) packages I've written. They are used when writing so-called "tabletests" or data-driven tests.
 
