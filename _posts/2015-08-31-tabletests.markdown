@@ -8,7 +8,7 @@ comments: true
 ---
 This article is an introduction and justification for [tabletest][tabletest] and [tabletest3][tabletest3]. These are small Python and Python3 (respectively) packages I've written. They are used when writing so-called "tabletests" or data-driven tests.
 
-I'll cause no controversy by saying that functions which are small and concise, are a "good thing". Such functions are easy to work with, easy to understand and easy to test.
+I'll cause no controversy by saying that functions which are small and concise are a "good thing". Such functions are easy to work with, easy to understand and easy to test.
 
 For the sake of argument, suppose we have a small function for converting strings of binary digits into the integers they represent. We'll call it `parse_bin`. It operates on strings such as `"1010"` and outputs numbers. Basic stuff really. If we were to code it in Python, it might look something like this:
 
@@ -130,7 +130,9 @@ The difference between the two versions is that we've replaced the manually iter
 
 Under the hood, the library generates a version of `test_parse_bin` for each test case. Therefore the code that gets executed looks like the first version rather than the second. We still get all the goodness of independent tests and boilerplate-free development, without having to develop it ourselves. Finally, the test runner is going to show one entry for each test case, which will keep us hooked on writing them.
 
-Usage should be straightforward and surprise free. For more info, tune in to the next [post][how-tabletest-works] in the series.
+The usage should be straightforward and surprise free. For more info, tune in to the next [post][how-tabletest-works] in the series.
+
+Anyhow, this is it for now.
 
 [tabletest]: https://github.com/horia141/tabletest
 [tabletest3]: https://github.com/horia141/tabletest3
