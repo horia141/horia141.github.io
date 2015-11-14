@@ -4,7 +4,7 @@ title: "Optimal Predictors"
 date: 2015-11-14 21:18:05
 categories: post
 tags: statistics math machine_learning applied_mathematics
-comments: false
+comments: true
 math: true
 ---
 This post is about a neat question I was asked many moons ago in an interview. I was quite pleased with myself for getting it right, especially [under pressure](https://www.youtube.com/watch?v=a01QQZyl-_I). I've changed some bits of the problem statement in order to protect the innocent, however.
