@@ -34,7 +34,7 @@ content (text, image, audio, video).
 The following adverserial transformations should produce equivalent images, as well:
 
 * Removing a small area from the borders.
-* 90, 180, 270 degrees rotation.
+* $$90$$, $$180$$, $$270$$ degrees rotation.
 * Horizontal or vertical flipping.
 * Adding or removing a watermark.
 * Alteration of color planes, but not of the luminance one.
