@@ -9,6 +9,8 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://horia141.com"
 github_username: horia141
 linkedin_username: horia141
+stackoverflow_url: http://stackoverflow.com/users/5910563/horia141
+stackoverflow_username: horia141
 permalink: ":title.html"
 
 # Build settings
