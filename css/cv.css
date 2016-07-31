@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/* Reset and global setup */
+
 @media all and (min-width: 800px) {
     body {
         width: 800px;
@@ -16,19 +18,50 @@ body {
     background-color: #fdfdfd;
 }
 
+body, h1, h2, h3, h4, h5, h6, dl, dd, ol, ul, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+/* Top-level sections */
+
+body > section {
+    border-bottom: 1px solid #e8e8e8;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Header */
+
 header {
     text-align: center;
     background-image: url("/cvheaderback.jpeg");
     background-position: center;
     height: 16em;
+    border-bottom: 1px solid #e8e8e8;
 }
 
 #headshot {
-    width: 12em;
-    height: 12em;
-    margin-top: 1.75em;
-    border-radius: 6.5em;
+    width: 12rem;
+    height: 12rem;
+    margin-top: 1.75rem;
+    border-radius: 6.5rem;
     border-color: #eeeeee;
     border-style: solid;
-    border-width: 0.3em;
+    border-width: 0.3rem;
+}
+
+/* Title */
+
+#master-title {
+    text-align: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #e8e8e8;
 }
