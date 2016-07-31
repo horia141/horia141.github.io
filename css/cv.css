@@ -68,6 +68,17 @@ header {
     border-bottom: 1px solid #e8e8e8;
 }
 
+/* Links */
+
+a {
+    color: #2a7ae2;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #1756a9;
+}
+
 /* Tags lists */
 
 ul.tags {
