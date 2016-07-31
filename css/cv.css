@@ -18,13 +18,15 @@ body {
     background-color: #fdfdfd;
 }
 
-body, h1, h2, h3, h4, h5, h6, dl, dd, ol, ul, p {
+h1, h2, h3, h4, h5, h6, dl, dd, ol, ul, p {
     margin: 0;
     padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 /* Top-level sections */
@@ -64,4 +66,31 @@ header {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-bottom: 1px solid #e8e8e8;
+}
+
+/* Tags lists */
+
+ul.tags {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ul.tags li {
+    display: inline-block;
+    color: #39739d;
+    background-color: #e1ecf4;
+    border-color: #e1ecf4;
+    margin: 2px 2px 2px 0;
+    padding: 4px 5px 5px;
+    line-height: 1;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap;
+}
+
+/* Paragraphs */
+
+p {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
