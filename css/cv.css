@@ -82,6 +82,10 @@ header {
     margin-right: 0rem;
 }
 
+#online-presence a i.fa {
+    color: #828282;
+}
+
 /* Links */
 
 a {
