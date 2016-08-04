@@ -14,7 +14,7 @@ layout: null
     <priority>1</priority>
   </url>
   <url>
-    <loc>{{ "/about/" | site.baseurl | prepend: site.url }}</loc>
+    <loc>{{ "/about.html" | site.baseurl | prepend: site.url }}</loc>
     <changefreq>weekly</changefreq>
   </url>  
   {% for post in site.posts %}
