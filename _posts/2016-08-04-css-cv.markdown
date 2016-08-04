@@ -1,0 +1,26 @@
+---
+layout: post
+title: "Playing With CSS"
+date: 2016-08-04 18:41:02
+categories: post
+tags: html html5 css css3 cv
+comments: true
+math: false
+---
+For the longest time, me and CSS were in a friend-of-a-friend type of relationship. Sure, we'd hang out when our common friend frontend development was around, but we'd never just hang out by ourselves. However, I always felt bad about this state of affairs, since it is one of the core technologies of the web. And I was sure my cargo-cult approach to it is not the proper aproach to it. There _must_ be some logic to it.
+
+And indeed there is. Looking back, I realized I've never actually studied CSS in a principled way. It was always fragmented and driven by the need of the moment. So after a read through a [CSS tutorial](http://marksheet.io/introduction.html) I felt I had a much better understanding.
+
+What I needed then was a way to actually test my newfound knowledge. Luckily this came in the form of the CV section on this blog. Or rather, the lack of it. I wanted to add one for the longest time, to mirror the info on StackOverflow and LinkedIn, but I knew I'd have to step outside the bounds of this Jekyll theme, where more CSS than I knew would be required to actually get something to look nice. So with that out of the way, I begun adding things.
+
+The first step was to write the HTML with all the info and no style. You can see the raw HTML [here](https://github.com/horia141/horia141.github.io/blob/master/cv.html). There's precious little extra fluff (divs upon divs, extra classes etc.), but instead everything is organised with semantic HTML5: lists, paragraphs, sections etc. The styling itself is [here](https://github.com/horia141/horia141.github.io/blob/master/css/cv.css).
+
+First thing to notice is that the stylesheet itself is pretty small. It has `132` lines of very airy and commented code. It could have been made much smaller, if that was a priority.
+
+Also, vanilla CSS was enough to get a nice looking page. Granted, there isn't that much going on, but it's good to know that not everything requires [Bootstrap](http://getbootstrap.com/css/) or some other CSS framework, a grid, or even a reset stylesheet. The style itself borrows from the Jekyll theme in terms of typography, with a dash of StackOverflow's tag styling. The only external dependency is on [FontAwesome](http://fontawesome.io/), for GitHub, StackOverflow and LinkedIn icons.
+
+Furthermore, the styling is responsive. This turned out to be easier to do than expected. There's a single `@media` rule in the whole stylesheet, in fact, which sets a limit to the vertical size of the `body` tag, for viewports with more than `800` pixels. Everything else relies on the natural flow of the HTML default layout, which is very mobile friendly. The only bits of layout work, was spacing out paragraps, headings and sections.
+
+Finally, not much of CSS3 was required. The only uses were the `@charset` and `@media` rules, the `:last-child` state selector and the `rem` unit. The latter was very useful in defining margins and paddings, because everything was relative to the `font-size` set on the root element, rather than on the closest ancestor's. As such, almost all sizes were in `rem`s, with the exception of borders, which were always `1px` and the tags.
+
+All in all, this was a very pleasant experience, and a definite boost to my confidence in dealing with web frontend development.
