@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: {}
+date: 2016-11-09T19:09:18.000Z
 categories: post
 tags: communication_networks internet telegraph
 comments: false
