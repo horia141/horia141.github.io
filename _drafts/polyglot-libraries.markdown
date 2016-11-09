@@ -1,11 +1,23 @@
 ---
 layout: post
-title: "Polyglot Libraries (And Frameworks)"
-date: 2015-12-16 23:28:05
+title: Polyglot Libraries (And Frameworks)
+date: {}
 categories: post
-tags: programming_languages software_development software_engineering library framework
+tags: >-
+  programming_languages software_development software_engineering library
+  framework
 comments: false
+published: true
 ---
+Many times, when somebody familiar with a programming language $foo, moves to a new programming language, $bar, they miss the nice libraries from $foo. So they end up writing a version of those libraries in $foo. This process tends to happen especially for the good libraries. So in time, 
+
+So we end up having, what is essentially the same library, written in different languages.
+
+The canonical example for this is xUnit, the unit testing library.
+
+On the one hand, there's a software artefact which is bounded to a certain programming environment, and that's a boundary with a very high wall around it. On the other hand, it's undeniable that the same concepts are at play, and there's a common core to all of them. So I'm 
+
+
 Quick question - have you ever used an xUnit library? You probably have? Which one though? JUnit (link)? CUnit (link)? unittest? RubyUnit etc?
 
 We've recently seen the rise of libraries which span multiple languages. Polyglot libraries and 
