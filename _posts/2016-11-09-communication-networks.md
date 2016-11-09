@@ -4,7 +4,7 @@ layout: post
 date: 2016-11-09T19:09:18.000Z
 categories: post
 tags: communication_networks internet telegraph
-comments: false
+comments: true
 ---
 Here's a highly simplified list of major telecommunication networks people have built, in somewhat historical order: mail service, telegraph, telephone, radio, television, the internet. 
 
