@@ -3,7 +3,7 @@ published: false
 ---
 This is the first of a many-parts series of articles on Internet advertising technology. Or _AdTech_, for short. This is not an especially well covered topic online, so perhaps this will be useful to people.
 
-My intended audience is developers or tech focused people just starting in AdTech. This means developers, designers, product managers etc. Hopefully it's a good refresher for people as well. 
+My intended audience is developers or tech focused people just starting in AdTech. This means developers, designers, product managers etc. Hopefully it's a good refresher for people as well. It's by no means complete or perfect.
 
 We all have an intuitive understanding of what [_advertising_](https://en.wikipedia.org/wiki/Advertising) is. It is a form of communication where one party tries to convince another party of something. We call the first party the _advertiser_, while the second the _audience_. The object in the vast majority of cases is commercial. The advertiser tries to convince the audience to buy a product or use a service. There is also non-commercial advertising, such as political ads or public services announcements. They're nowhere near as big, though.
 
