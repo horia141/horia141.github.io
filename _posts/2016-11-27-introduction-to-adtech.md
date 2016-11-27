@@ -1,5 +1,10 @@
 ---
 published: false
+layout: post
+date: 2016-11-27T12:07:23.000Z
+categories: post
+tags: ad_tech online_advertising advertising
+comments: true
 ---
 This is the first of a many-parts series of articles on Internet advertising technology. Or _AdTech_, for short. This is not an especially well covered topic online, so perhaps this will be useful to people.
 
