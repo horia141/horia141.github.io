@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: 2016-11-27T12:07:23.000Z
+date: {}
 categories: post
 tags: ad_tech online_advertising advertising
 comments: true
@@ -17,6 +17,7 @@ Besided advertisers and the audience, there is one third big player in online ad
 _AdTech_ is the technology of advertising **on the Internet**. That last bit is crucial. Advertising has always involved a bit of technology. For example, for the printing of newspaper ads or filming of commercials. But, it is only with the rise of the Internet, that the technical component has taken a crucial role.  One that warrants a whole engineering discipline dedicated to it. Indeed, some of the largest tech companies in the world make their money from AdTech.
 
 Some peculiarities of online advertising, which set it apart from regular advertising:
+
 - Publishers are used almost universally. Indeed, most of the direct-to-audience advertising occurs when a publisher runs its own in-house ads.
 - Each interaction a member of the audience has with an ad can be tracked and measured. This allows for much better reporting and measurement around ad campaigns. It is possible to check that an ad has actually been seen and to quantify the level of interaction with it. Traditional advertising was orders of magnitude less precise.
 - There is a wealth of information about each member of the audience available, inferred from their online behaviour. This allows for a much better targeting of ads. Traditional advertising relied on broad properties of the population of audience members seeing a movie or reading a newspaper.
