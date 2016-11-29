@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: {}
+date: 2016-11-27T19:07:23.000Z
 categories: post
 tags: ad_tech online_advertising advertising
 comments: true
