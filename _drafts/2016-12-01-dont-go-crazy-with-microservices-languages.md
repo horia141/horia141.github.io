@@ -5,6 +5,9 @@ One of the architectural patterns for building web applications is [microservice
 
 However, I feel this advantage has been oversold. I'd argue it's more of a net neutral feature, if not a negative one, in the wrong hands. The rest of this post will give some argumentation for this point. It's by no means something which should put people off microservices. It's more like a warning to know what you're getting yourself into.
 
+The core of the issue has to do with client libraries. Except in the most simple of cases, ooe
+
+
 An example I think will shed some light. A common piece of functionality to break off into a microservice is email sending. Regardless of the way email is sent, whether it be directly, or through a third-party provider such as [SendGrid](https://sendgrid.com/) or [MailChimp](https://mailchimp.com/), there usually needs to be a single service which handles that communication. That way, the complex interface exposed by the carrier is wrapped into operations which make sense for the application, security rules can be enforced etc. There's only one point to audit as well. Furthermore, email sending is something which happens asynchronously to the originator task. So putting all this complexity in a single service makes total sense.
 
 Now, suppose there are various other services which are clients of the mail service. 
