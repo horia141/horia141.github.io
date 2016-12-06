@@ -5,6 +5,8 @@ I'm a big fan of our industry's openness to people from all backgrounds. As the 
 
 A common thread, especially in IT universities, people start working.
 
+The gist of my issue is this: nothing good will come out of it and you'll miss out on a lot of things you _can only do in university_.
+
 Experience: been there/done that, won't recommend.
 
 Why you might quit:
