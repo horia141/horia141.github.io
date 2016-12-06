@@ -7,7 +7,7 @@ A common thread, especially in IT universities, people start working.
 
 The gist of my issue is this: nothing good will come out of it and you'll miss out on a lot of things you _can only do in university_.
 
-Experience: been there/done that, won't recommend.
+But how did you come in possession of such sage wisdom, Horia, you might ask? As always with these things, through doing and getting burned. I started working in my 2nd year of university. I then worked, with a break of a couple of months, all through my 4th year. I finally smarted up towards the end of my 4th year, and joined a masters program and was focused 100% on it. I had to learn a lot of the stuff I should had learned in my undergraduate years, atop all the new fancy stuff from the master. But it was a really good experience, and the knowledge I gathered there continues to pay dividends. On the other hand, one of the jobs I had during that time, I don't even mention on my CV. The other is usually not counted by employers as "experience", since many don't grok the Romanian concept of working in university.
 
 Why you might quit:
 
