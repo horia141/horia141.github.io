@@ -13,7 +13,7 @@ As with all advice, this one isn't universal. Sometimes, you _have_ to work. It'
 
 Why you might quit:
 
-- Not learning the right stuff in school. All theory, less practice.
+- Not learning the right stuff in school. All theory, less practice. This is a perenial complaint about higher education in Romania. While there's a grain/blob of truth to it, this misses the point of university. If you don't like the courses you have, you can easily stufy your own version. It's more about the free time. It's not that hard to get a passing 5 in university subjects.
 - The diploma isn't good. Especially with plagiarism concerns.
 - Work experience is gonna be good.
 
