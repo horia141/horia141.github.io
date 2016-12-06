@@ -24,6 +24,8 @@ Why you should stay:
 - 1-2 extra years of experience in a 50 year career isn't worth jack.
 - You'll most likely be at the bottom of the totem pole. Who's gonna be above you? Fresh grads, people with experience, everybody else. Projects aren't going to be cool, you aren't going to learn as much.
 - Student life is good. It's, for most people, a good combination of a lot of rights and no obligations. Don't be in a hurry to leave it.
+- The competition is doing it. Your peers from other universities are doing it. They're gonna come in the workforce knowing a lot more than you.
+- It's free. Few countries in the world where this is the case. Even in the cases where it's not the ROI is still there.
 
 Alternatives:
 - Work part time. Not that great. Things have a way of going to full time.
