@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: {}
+date: 2016-12-07T19:07:23.000Z
 categories: post
 tags: career_advice school
 comments: true
