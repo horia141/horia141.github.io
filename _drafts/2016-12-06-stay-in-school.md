@@ -5,7 +5,7 @@ I'm a big fan of our industry's openness to people from all backgrounds. As the 
 
 Given this, and the relatively high salaries one can get as an entry level developer, in Romania, it's unsurprising many people in technical universities start working for tech companies sometime in their 2nd or 3rd years. If a degree isn't worth _that_ much, why fret about it?
 
-However, as I hope to make clear in this article, nothing good can come out of such an arrangement.
+However, as I hope to make clear in this article, nothing good can come out of such an arrangement. You shouldn't try to juggle both a part-time/0.75-quarter-time/full-time job and your studies, you definitely shouldn't quit school. Instead you should focus 100% on the studies and use your university years wisely.
 
 But how did you come in possession of such sage wisdom, Horia, you might ask? As always with these things, through doing and getting burned. I worked from my 2nd year of university, through to my 4th yearI finally smarted up towards the end of my 4th year, and joined a masters program and was focused 100% on it. I had to learn a lot of the stuff I should had learned in my undergraduate years, atop all the new fancy stuff from the master. But it was a really good experience, and the knowledge I gathered there continues to pay dividends. On the other hand, one of the jobs I had during that time, I don't even mention on my CV. The other is usually not counted by employers as "work experience". The experiences themselves weren't that great. One of the places didn't use source control, for example.
 
@@ -28,7 +28,11 @@ The experience itself isn't going to count that much. First of all, it's just 1-
 Why You Should Stay In School
 ---
 
-**You're an adult with virtually no responsabilities**. 
+**You're an adult with virtually no responsabilities.** It's very unlikely that this situation will occur again in your life. Cherish it. Party, socialize, travel as the budget permits. Do some sowing for the seeds of your new careers.
+
+**It's the last time you have loads of time to learn theory.**
+
+
 - Last time to learn loads of theory. After this, it's gonna be hard to read big heavy books in a concentrated manner. You're gonna have to stay up to date with tech, and learn more practical stuff.
 - A diploma is a diploma. There are still certain advantages - the 16% reduction, can start a PFA, can hold leadership positions in companies / the state. There's a whole matter of law around this.
 - 1-2 extra years of experience in a 50 year career isn't worth jack. Companies aren't going to take it into consideration anyways, more or less.
@@ -38,6 +42,12 @@ Why You Should Stay In School
 - The competition is doing it. Your peers from other universities are doing it. They're gonna come in the workforce knowing a lot more than you.
 - It's free. Few countries in the world where this is the case. Even in the cases where it's not the ROI is still there.
 - Work is work. It's not all experience and personal growth. It's also boring meetings, deadlines, bad colleagues, dependence on coffee, no more coffee, commutes through [this](http://www.hotnews.ro/stiri-administratie_locala-21361934-foto-cauzele-aglomeratiei-infernale-din-metrou-trenurile-nu-mai-fac-fata-intr-oras-paralizat-suprafata-subteran.htm) or [this](http://observator.tv/social/trafic-aglomerat-la-iesirile-din-capitala-trasee-alternative-149882.html).
+
+Some Tips For Using Your University Years Wisely
+---
+
+Rule #1 is that you are in charge of your education. 
+
 
 Some Alternatives
 ---
