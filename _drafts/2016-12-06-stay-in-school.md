@@ -30,29 +30,18 @@ Why You Should Stay In School
 
 **You're an adult with virtually no responsabilities.** It's very unlikely that this situation will occur again in your life. Cherish it. Party, socialize, travel as the budget permits. Do some sowing for the seeds of your new careers.
 
-**It's the last time you have loads of time to learn theory.**
+**It's the last time you have loads of time to learn theory/the hard stuff.** It's not easy to work through dense books such as [Introduction To Algorithms](https://mitpress.mit.edu/books/introduction-algorithms) or [SICP](https://mitpress.mit.edu/sicp/full-text/book/book.html). You need loads of time for these things and university is the perfect place to do it. Loads of the exciting and cool stuff happening in techonology today, such as Deep Learning, Bitcoin, NoSQL databases, VR etc. require a fair amount of math to understand. While what you learn in a typical undergraduate degree won't land you that job at DeepMind, it will at least allow you to understand and apply these things.
 
+**A diploma is a diploma.** Even if it's from the [701+ club](http://www.hotnews.ro/stiri-esential-21274757-clasamentul-international-universitatilor-2016-patru-universitati-din-romania-intrat-top-categoria-701.htm). There's simply certain employers for whom not having a diploma is going to count as a big red flag. Many of the "prestigious" tech companies fall in this camp, when they do lower-level recruiting. Many large companies in France, Germany, the nordic countries etc. are also very atuned to such thing. Finally, on a more prosaic note, in Romania, as a diploma-holding IT worker you don't pay the 16% income tax everybody else has to pay.<a name="footnote2">[2]</a> That's leaving a lot of money on the table, especially for more senior positions. You'll also not be eligible for directorship positions in private or state companies, not be eligible to start PFAs etc.
 
-- Last time to learn loads of theory. After this, it's gonna be hard to read big heavy books in a concentrated manner. You're gonna have to stay up to date with tech, and learn more practical stuff.
-- A diploma is a diploma. There are still certain advantages - the 16% reduction, can start a PFA, can hold leadership positions in companies / the state. There's a whole matter of law around this.
-- 1-2 extra years of experience in a 50 year career isn't worth jack. Companies aren't going to take it into consideration anyways, more or less.
-- Most of the cool exciting stuff in CS today: Machine Learning / Deep Learning / AI, Bitcoin, distributed systems, VR etc. require a lot of math, CS, statistics etc. to understand. You won't be contributing to these things with what you learn in undergrad, but at least you'll know enough to understand and use them. That's an easy differentiator later in the career.
-- You'll most likely be at the bottom of the totem pole. Who's gonna be above you? Fresh grads, people with experience, everybody else. Projects aren't going to be cool, you aren't going to learn as much.
-- Student life is good. It's, for most people, a good combination of a lot of rights and no obligations. Don't be in a hurry to leave it.
-- The competition is doing it. Your peers from other universities are doing it. They're gonna come in the workforce knowing a lot more than you.
-- It's free. Few countries in the world where this is the case. Even in the cases where it's not the ROI is still there.
-- Work is work. It's not all experience and personal growth. It's also boring meetings, deadlines, bad colleagues, dependence on coffee, no more coffee, commutes through [this](http://www.hotnews.ro/stiri-administratie_locala-21361934-foto-cauzele-aglomeratiei-infernale-din-metrou-trenurile-nu-mai-fac-fata-intr-oras-paralizat-suprafata-subteran.htm) or [this](http://observator.tv/social/trafic-aglomerat-la-iesirile-din-capitala-trasee-alternative-149882.html).
+** It's free.** The list of countries which offer free college education is quite short. Romania is in _really good_ company here, with the likes of Norway, Germany, France, Sweeden, Finland etc. There are also no strings attached. No staying in the country for X years, no contributing back to society in any way, in fact.
 
-Some Tips For Using Your University Years Wisely
----
+** The competition is doing it.** Students in other western countries, India, China, Japan etc. generally don't work during their studies. They might TA, do light administrative work, part time work in seasonal industries etc., but nothing as intense as holding a tech job. In the long run, they might be the competition. Whether directly, as in a [globally distributed workforce](https://en.wikipedia.org/wiki/Distributed_workforce) all vying for the same global pool of jobs, or more indirectly, as Romania not being able to keep it's IT industry up to snuff with the global requirements. When outsourcing projects become maintaining machine learning systems rather than more traditional line-of-business applications, since the outsourcers have moved to _The Next Big Thing_, this might be a problem.
 
-Rule #1 is that you are in charge of your education. 
-
+**Work is work.** It's not all hands on experience, mentorship from senior colleagues and personal growth. It's also boring meetings, deadlines, bad colleagues, dependence on coffee, no more coffee in the building, commutes through [this](http://www.hotnews.ro/stiri-administratie_locala-21361934-foto-cauzele-aglomeratiei-infernale-din-metrou-trenurile-nu-mai-fac-fata-intr-oras-paralizat-suprafata-subteran.htm) or [this](http://observator.tv/social/trafic-aglomerat-la-iesirile-din-capitala-trasee-alternative-149882.html). You might end up stuck on a legacy project, where you won't learn anything useful, and worse, you'll learn bad habits which are hard to shake off later. Finally, you'll be at the bottom of the totem pole.
 
 Some Alternatives
 ---
-
-
 
 Alternatives:
 - Work part time. Not that great. Things have a way of going to full time.
@@ -66,3 +55,4 @@ Alternatives:
 ---
 
 [1](#footnote1) There's a grain of salt to that accusation though. The curricula is outdated at many universities. Some courses which look nice on paper, end up being shitty in practice, because of bad professors or bad working conditions.
+[2](#footnote2) This will probably not go on forever. But it will for the time you're in university and the first few years of the career. Even after that, it's likely going to be a gradual reactivation of the tax.
