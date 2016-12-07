@@ -43,14 +43,19 @@ Why You Should Stay In School
 Some Alternatives
 ---
 
-Alternatives:
-- Work part time. Not that great. Things have a way of going to full time.
-- Work over the summer. Do an intenrship for companies who have this.
-- Freelance on small side-projects.
-- Do a startup.
-- Work some non-tech job.
-- Google summer of code
-- Aim for a prestigious internship.
+If you do want to get the work experience, your best bet is to be smart about it. Here are a couple of options.
+
+**Work part time.** This is not that great of an option, because it tends to slip into full-time work. There are some companies which respect this though.
+
+**Work over the summer break.** Either do an internship (preferred) or just work as a regular employee. From what I remember, it was actually mandatory to do some _pracatice_ in later university years, so this ties in well.
+
+**Freelance.** There's loads of small projects one can take up, either alone or with some friends. You need more social skills and selling knowledge than with a regular job, but it's actually quite good experience.
+
+**Do a startup.** Why not? No better time from a responsabilities point of view. And the threshold to entry in the IT field is quite low. You'll definitely learn a lot, especially if you actually manage to sell something.
+
+**Participate in [Google summer of code](https://developers.google.com/open-source/gsoc/) (or equivalent).** You get to spend the summer working on an open-source project and Google is paying the bill. What's not to like? The renumeration is quite decent for 2-3 months of work. As student your expenses are relatively low, so you can definitely spread that money for the rest of the year.
+
+**Work on an open source project.** If it's just the coding experience that you're after, then working on OSS projects is a good way to get it. Some not-so-popular, but still critical, pieces of software even have [bounties](https://github.com/flightaware/Tcl-bounties) attached to fixing issues.
 
 ---
 
