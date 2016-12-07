@@ -1,13 +1,13 @@
 ---
 published: false
 ---
-I'm a big fan of our industry's openness to people from all backgrounds. As the [StackOverflow developer survey](http://stackoverflow.com/research/developer-survey-2016#developer-profile-education) highlights, some 40% of all developers don't have a formal CS or even technical background. That's a huge amount for one of "professions".
+I'm a big fan of our industry's openness to people from all backgrounds. As the [StackOverflow developer survey](http://stackoverflow.com/research/developer-survey-2016#developer-profile-education) highlights, some 40% of all developers don't have a formal CS or even technical background. There is a bias towards web development in that survey, but, even in the larger population of developers, this is likely to be the case.
 
-A common thread, especially in IT universities, people start working.
+Given this, and the relatively high salaries one can get as an entry level developer, in Romania, it's unsurprising many people in technical universities start working sometime in their 2nd or 3rd years.
 
-The gist of my issue is this: nothing good will come out of it and you'll miss out on a lot of things you _can only do in university_.
+However, as I hope to make clear in this article, nothing good can come out of such an arrangement.
 
-But how did you come in possession of such sage wisdom, Horia, you might ask? As always with these things, through doing and getting burned. I started working in my 2nd year of university. I then worked, with a break of a couple of months, all through my 4th year. I finally smarted up towards the end of my 4th year, and joined a masters program and was focused 100% on it. I had to learn a lot of the stuff I should had learned in my undergraduate years, atop all the new fancy stuff from the master. But it was a really good experience, and the knowledge I gathered there continues to pay dividends. On the other hand, one of the jobs I had during that time, I don't even mention on my CV. The other is usually not counted by employers as "experience", since many don't grok the Romanian concept of working in university. The experiences themselves weren't that great. One of the places didn't use source control, for example.
+But how did you come in possession of such sage wisdom, Horia, you might ask? As always with these things, through doing and getting burned. I started working in my 2nd year of university. I continued through to my 4th year. I finally smarted up towards the end of my 4th year, and joined a masters program and was focused 100% on it. I had to learn a lot of the stuff I should had learned in my undergraduate years, atop all the new fancy stuff from the master. But it was a really good experience, and the knowledge I gathered there continues to pay dividends. On the other hand, one of the jobs I had during that time, I don't even mention on my CV. The other is usually not counted by employers as "work experience". The experiences themselves weren't that great. One of the places didn't use source control, for example.
 
 As with all advice, this one isn't universal. Sometimes, you _have_ to work. It's hard to focus on studying when there's no food on the table. Othertimes, you're just _that_ good and you have Google and Facebook fighting over you. No point in wasting time on this blog. However, for the _rest_ of you, this might be useful.
 
