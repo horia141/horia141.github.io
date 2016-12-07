@@ -11,14 +11,24 @@ But how did you come in possession of such sage wisdom, Horia, you might ask? As
 
 As with all advice, this one isn't universal. Sometimes, you _have_ to work. It's hard to focus on studying when there's no food on the table. And an IT job sure beats the alternatives. Othertimes, you're just _that_ good and you have Google and Facebook fighting over you. No point in wasting time on this blog. However, for the _rest_ of you, this might be useful.
 
-Why you might quit:
+Why You Might Want To Join A Company
+---
 
-- Not learning the right stuff in school. All theory, less practice. This is a perenial complaint about higher education in Romania. While there's a grain/blob of truth to it, this misses the point of university. If you don't like the courses you have, you can easily stufy your own version. It's more about the free time. It's not that hard to get a passing 5 in university subjects.
-- The diploma isn't good. Especially with plagiarism concerns.
-- Work experience is gonna be good.
+Here's some of the arguments I've used and heard people use when getting a job in university.
 
-Why you should stay:
+**Not learning the right stuff in school.** A perenial complaint for Romanian universities is that they focus too much on theory and other stuff "you don't need in _real life_" <a name="footnote1">[1]</a>. The non-obvious implication being that _real life == work life_. Which is sad. And it also misses the point of higher education. The stuff you learn in university is supposed to last your whole career, and is supposed to be a foundation upon which any other thing you learn is based. Any actual technology you learn should have paid its dues. We're talking about Unix, the Internet, the world wide web etc. The latest JS framework or the _minimal set of skills required to get a job_? Not so much.
 
+**The work experience is gonna be good.** But is it though? It's gonna be different, for sure. Much more hands on. You might even get to work with some newer tech. But after one or three months, you will basically learn all that's there to be learned about the tech and processes of a company. You'll be left with work. Lots of work.
+The experience itself isn't going to count that much. First of all, it's just 1-3 years in a possibly 50 years career. Second, employers know your attention is not 100% on the job, you get lower responsability etc, so they know not to put too much weight on it. Third, there is a dearth of candidates for roles. You're not missing out by not being employed, in a way your colleagues from an economic or social sciences university might be.
+
+**But the money is good, no?** It might be good compared to what your peers from non-technical universities are earning, or various types of low skilled laborers, or even your parents. But nobody's gonna throw mad money at a 20ish university student at their first or second job. All else being equal, for the same set of skills, an employer is going to prefer a university graduate over a non-university graduate. Regardless of the type of university.
+
+**All my friends are doing it.** (Even the ones whose technicall skills are not as good as me at $computer_stuff). I'm not going to insult you with a "if all your friends jumped off a building, would you follow them"? argument. There is some [wisdom](https://en.wikipedia.org/wiki/The_Wisdom_of_Crowds) in following the crowd. But, like the next section will hopefully highlight, the advantages of staying in school 100% outweight. 
+
+Why You Should Stay In School
+---
+
+**You're an adult with virtually no responsabilities**. 
 - Last time to learn loads of theory. After this, it's gonna be hard to read big heavy books in a concentrated manner. You're gonna have to stay up to date with tech, and learn more practical stuff.
 - A diploma is a diploma. There are still certain advantages - the 16% reduction, can start a PFA, can hold leadership positions in companies / the state. There's a whole matter of law around this.
 - 1-2 extra years of experience in a 50 year career isn't worth jack. Companies aren't going to take it into consideration anyways, more or less.
@@ -29,9 +39,20 @@ Why you should stay:
 - It's free. Few countries in the world where this is the case. Even in the cases where it's not the ROI is still there.
 - Work is work. It's not all experience and personal growth. It's also boring meetings, deadlines, bad colleagues, dependence on coffee, no more coffee, commutes through [this](http://www.hotnews.ro/stiri-administratie_locala-21361934-foto-cauzele-aglomeratiei-infernale-din-metrou-trenurile-nu-mai-fac-fata-intr-oras-paralizat-suprafata-subteran.htm) or [this](http://observator.tv/social/trafic-aglomerat-la-iesirile-din-capitala-trasee-alternative-149882.html).
 
+Some Alternatives
+---
+
+
+
 Alternatives:
 - Work part time. Not that great. Things have a way of going to full time.
 - Work over the summer. Do an intenrship for companies who have this.
 - Freelance on small side-projects.
 - Do a startup.
 - Work some non-tech job.
+- Google summer of code
+- Aim for a prestigious internship.
+
+---
+
+[1](#footnote1) There's a grain of salt to that accusation though. The curricula is outdated at many universities. Some courses which look nice on paper, end up being shitty in practice, because of bad professors or bad working conditions.
