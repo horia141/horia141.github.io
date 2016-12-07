@@ -1,7 +1,7 @@
 ---
 published: false
 ---
-I'm a big fan of our industry's openness to people from all backgrounds. As the [StackOverflow developer survey](bla) stats show, fully 50% of all developers don't have a formal CS or technical background. Granted, there's a bias towards web developers on SO, but still. This is in fact the only place where IT shows large diversity. Pun intended.
+I'm a big fan of our industry's openness to people from all backgrounds. As the [StackOverflow developer survey](http://stackoverflow.com/research/developer-survey-2016#developer-profile-education) highlights, some 40% of all developers don't have a formal CS or even technical background. That's a huge amount for one of "professions".
 
 A common thread, especially in IT universities, people start working.
 
