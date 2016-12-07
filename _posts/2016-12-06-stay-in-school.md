@@ -1,5 +1,10 @@
 ---
 published: false
+layout: post
+date: 2016-12-07T19:07:23.000Z
+categories: post
+tags: career_advice school
+comments: true
 ---
 I'm a big fan of our industry's openness to people from all backgrounds. As the [StackOverflow developer survey](http://stackoverflow.com/research/developer-survey-2016#developer-profile-education) highlights, some 40% of all developers don't have a formal CS or even technical background. There is a bias towards web development in that survey, but, even in the larger population of developers, some amount of this fact is likely to hold true.
 
