@@ -36,9 +36,9 @@ Why You Should Stay In School
 
 ** It's free.** The list of countries which offer free college education is quite short. Romania is in _really good_ company here, with the likes of Norway, Germany, France, Sweeden, Finland etc. There are also no strings attached. No staying in the country for X years, no contributing back to society in any way, in fact.
 
-** The competition is doing it.** Students in other western countries, India, China, Japan etc. generally don't work during their studies. They might TA, do light administrative work, or part time work in seasonal industries etc., but nothing as intense as holding a tech job. And in the long run, they might be the _competition_. Whether directly, as in a [globally distributed workforce](https://en.wikipedia.org/wiki/Distributed_workforce), or more indirectly, as Romania not being able to keep it's IT industry up to snuff with the global requirements. When outsourcing projects become maintaining machine learning systems rather than more traditional line-of-business applications, since the outsourcers have moved to _The Next Big Thing_, this might be a problem.
+** The competition is doing it.** Students in other western countries, India, China, Japan etc. generally don't work during their studies. They might TA, do light administrative work, or part time work in seasonal industries etc., but nothing as intense as holding a tech job. And in the long run, they might be the _competition_. Whether directly, as in a [globally distributed workforce](https://en.wikipedia.org/wiki/Distributed_workforce). Or more indirectly, as in Romania not being able to keep its IT industry up to snuff with the global requirements. What's hot right now in Sillicon Valley might just be what the outsourcing industry will be busy maintaining and improving in 10 years time. 
 
-**Work is work.** It's not all hands on experience, mentorship from senior colleagues and personal growth. It's also boring meetings, deadlines, bad colleagues, dependence on coffee, no more coffee in the building, commutes through [this](http://www.hotnews.ro/stiri-administratie_locala-21361934-foto-cauzele-aglomeratiei-infernale-din-metrou-trenurile-nu-mai-fac-fata-intr-oras-paralizat-suprafata-subteran.htm) or [this](http://observator.tv/social/trafic-aglomerat-la-iesirile-din-capitala-trasee-alternative-149882.html). You might end up stuck on a legacy project, where you won't learn anything useful, and worse, you'll learn bad habits which are hard to shake off later. Finally, you'll be at the bottom of the totem pole.
+**Work is work.** It's not all hands on experience, mentorship from senior colleagues and personal growth. It's also boring meetings, deadlines, bad colleagues, dependence on coffee, no more coffee in the building, commutes through [this](http://www.hotnews.ro/stiri-administratie_locala-21361934-foto-cauzele-aglomeratiei-infernale-din-metrou-trenurile-nu-mai-fac-fata-intr-oras-paralizat-suprafata-subteran.htm) or [this](http://observator.tv/social/trafic-aglomerat-la-iesirile-din-capitala-trasee-alternative-149882.html). You might end up stuck on a legacy project, where you won't learn anything useful, or worse, you'll learn bad habits which are hard to shake off later. Some shops eschew basic things like source control, let alone TDD, microservices or whatever the hot new thing everybody _needs_ to know. Finally, you'll be at the bottom of the totem pole, in whatever organization you're part of. Not fun.
 
 Some Alternatives
 ---
@@ -51,13 +51,19 @@ If you do want to get the work experience, your best bet is to be smart about it
 
 **Freelance.** There's loads of small projects one can take up, either alone or with some friends. You need more social skills and selling knowledge than with a regular job, but it's actually quite good experience.
 
-**Do a startup.** Why not? No better time from a responsabilities point of view. And the threshold to entry in the IT field is quite low. You'll definitely learn a lot, especially if you actually manage to sell something.
+**Do a startup.** Why not? No better time from a lack-of-responsabilities point of view. And the threshold to entry in the IT field is quite low. You'll definitely learn a lot, especially if you actually manage to sell something.
 
 **Participate in [Google summer of code](https://developers.google.com/open-source/gsoc/) (or equivalent).** You get to spend the summer working on an open-source project and Google is paying the bill. What's not to like? The renumeration is quite decent for 2-3 months of work. As student your expenses are relatively low, so you can definitely spread that money for the rest of the year.
 
 **Work on an open source project.** If it's just the coding experience that you're after, then working on OSS projects is a good way to get it. Some not-so-popular, but still critical, pieces of software even have [bounties](https://github.com/flightaware/Tcl-bounties) attached to fixing issues.
 
+Conclusion
+---
+
+Hopefully this helps you put in context the choices you have. It's not always easy, especially _in the trenches_, but focusing on this will definitely pay off in the long term.
+
 ---
 
 [1](#footnote1) There's a grain of salt to that accusation though. The curricula is outdated at many universities. Some courses which look nice on paper, end up being shitty in practice, because of bad professors or bad working conditions.
+
 [2](#footnote2) This will probably not go on forever. But it will for the time you're in university and the first few years of the career. Even after that, it's likely going to be a gradual reactivation of the tax.
