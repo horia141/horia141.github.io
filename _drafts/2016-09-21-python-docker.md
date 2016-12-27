@@ -1,7 +1,7 @@
 ---
 published: false
 layout: post
-date: {}
+date: 2016-09-21 10:12:23
 categories: post
 tags: python docker web_dev
 comments: false
