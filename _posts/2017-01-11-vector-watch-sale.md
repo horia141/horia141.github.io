@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: {}
+date: 2017-01-26T16:16:05.000Z
 categories: post
 tags: smart_watch vector_watch tech industry
 comments: true
