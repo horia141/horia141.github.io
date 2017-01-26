@@ -20,4 +20,5 @@ It'll be interesting to see how the "killer version" looks like. Will it be brou
 
 ---
 [1] Granted, this last part isn't 100% true. The design is done in Romania. The building is done, as with all these things, in China.
+
 [2] There's a huge step between manufacture of mechanical and elctronical devices. It's not a reasonable asumption to expect this transition to go smoothly. One can argue that the markets are actually quite different, esecially at the high end. Somebody interested in a Patek Philippe isn't a potential client for a smartwatch. But they still can wear a single watch at a time. If the industry manages to produce something truly compelling, then that's bad news for watch manufacturers, regardless of price tag.
