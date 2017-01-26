@@ -11,6 +11,8 @@ The reason that it's not _dire_ news is that we're still early in the game. The 
 
 I also feel like the product category itself has been unfairly set up against smartphones/phones. That's just an incredible computational sweet spot to beat. And it's going to take other large advances in technology to beat it. And whatever beats it will probably do the same to smartwatches, VR and a host of other "ancilliary" tech.
 
+It'll be interesting to see how the "killer version" looks like. Will it be brought upon by advances in technology? Or by building it in a way in which the current players haven't thought of?
+
 ---
 [1] Granted, this last part isn't 100% true. The design is done in Romania. The building is done, as with all these things, in China.
 [2] There's a huge step between manufacture of mechanical and elctronical devices. It's not a reasonable asumption to expect this transition to go smoothly. One can argue that the markets are actually quite different, esecially at the high end. Somebody interested in a Patek Philippe isn't a potential client for a smartwatch. But they still can wear a single watch at a time. If the industry manages to produce something truly compelling, then that's bad news for watch manufacturers, regardless of price tag.
