@@ -5,7 +5,7 @@ layout: post
 date: 2017-02-12T16:16:05.000Z
 categories: post
 tags: xor information_theory machine_learning
-comments: false
+comments: true
 math: true
 ---
 We all the XOR operation. It's the cousin of NOT, AND and OR. Like AND and OR, it is a binary boolean function. Unlike them, most programming languages don't have an explicit "logical operator" for it, but rather show only the bitewise version. Regardless, cryptographers love it and machine learning folks fear it. And for very good reasons. Despite its simplicity, there are quite interesting things to say about it, and this article presents three of them.
