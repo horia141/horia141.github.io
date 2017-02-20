@@ -37,11 +37,17 @@ There are several things which we'd like to know about our system:
 
 - We have at least one book in our system.
 - Books have titles written in "This Format". Operators can enter the title in any form, but we should format this to this format.
-- Books should have at least an author.
+- Books should have at least one author.
 - Books with three or more authors have the "collective_work" bit set.
 - Orders must refer to a book which exists, and with it's properties. Assuming that the book is "static" - has a given price forever etc.
 
 Some of the tests can and should be enforced in the code, and tested via unittests etc. But, as in our SO case, sometimes the code becomes quite convoluted and the simple logic is hidden. So we'd like to just assert a general property about the system.
+
+## Tutorial
+
+V will help us write these things, and express them in a nice way.
+
+As I said, V is just a library. So in order to use it, we must use it in an application. For the purposes of this post, a simple console application suffices. In SO, 
 
 [ some notes : one writes code that is testable, one should have data that is validationable ]
 
