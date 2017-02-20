@@ -17,4 +17,11 @@ However, there's a class of issues which have affected us, and which testing wou
 
 This is also something which traditional monitoring is not well suited for. It requires deep insights into our system and a lot of data munging, cleaning and aggregation to get at the insight: the ads which should behave in a certain way are behaving in that way.
 
-There's a 
+There's a bunch of behaviours like this for the ads system. From ad serving to making sure that two services which should have their data in sync actually do so, to just making sure that all the complex business rules encoded in the application are actually reflected in the data.
+
+After a week or so of trying to synchronize the data in our jobs system with the data in our ads system, and finding a myriad issues [1] [integrate this anecdote], I decided to try to build a system which would alert us when something like this happened. From there it expanded into a system for checking all the behaviours of the system, known as ad server validation.
+
+It runs once day, as a scheduled task [Providence?] and looks at the previous day's traffic as well as 
+
+---
+[1] My favorite was a case where we had a parent entity in the jobs system with several child entities which needed to be mirroed on the ads system. Every entity was properly mirrored, but the parent-child relationship was not in several cases. Neither should have been mutable. But they were.
