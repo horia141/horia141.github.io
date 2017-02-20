@@ -21,7 +21,13 @@ There's a bunch of behaviours like this for the ads system. From ad serving to m
 
 After a week or so of trying to synchronize the data in our jobs system with the data in our ads system, and finding a myriad issues [1] [integrate this anecdote], I decided to try to build a system which would alert us when something like this happened. From there it expanded into a system for checking all the behaviours of the system, known as ad server validation.
 
-It runs once day, as a scheduled task [Providence?] and looks at the previous day's traffic as well as 
+It runs once day, as a scheduled task [Providence?] and looks at the previous day's traffic as well as the totality of the entities in our database.
+
+I managed to extract the runner bits into a small library, useful in other projects. The rest of this post will describe the library, and how to use it.
+
+## Validation
+
+Validation is a library which provides some tools for checking that your complex application is doing the things it's supposed to do. It's a lot like testing, but whereas testing is anticipative, this is post-fact. However, many of the patterns are similar with testing libraries. Where in a testing library like NUnit we have test fixtures and tests, in V we have validation fixtures and validators. V even uses the NUnit fluent constraint bits to assert things about facts.
 
 ---
 [1] My favorite was a case where we had a parent entity in the jobs system with several child entities which needed to be mirroed on the ads system. Every entity was properly mirrored, but the parent-child relationship was not in several cases. Neither should have been mutable. But they were.
