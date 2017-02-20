@@ -27,7 +27,23 @@ I managed to extract the runner bits into a small library, useful in other proje
 
 ## Validation
 
-Validation is a library which provides some tools for checking that your complex application is doing the things it's supposed to do. It's a lot like testing, but whereas testing is anticipative, this is post-fact. However, many of the patterns are similar with testing libraries. Where in a testing library like NUnit we have test fixtures and tests, in V we have validation fixtures and validators. V even uses the NUnit fluent constraint bits to assert things about facts.
+Validation is a library which provides some tools for checking that your complex application is doing the things it's supposed to do. It's a lot like testing, but whereas testing is anticipative, this is post-fact. However, many of the patterns are similar with testing libraries. Where in a testing library like NUnit we have test fixtures and tests, in V we have validation fixtures and validators. V even uses the NUnit fluent constraint bits to assert things about facts. Where things differ is that whereas in NUnit one checks that a function called with some parmeters returns some values, in V, we check that some piece of data in our "model" has some expected value. The model can be anything: entities and tables in an SQL database, entries in a logging system, data in an NoSQL database, values in Redis, files in HDFs etc. as well as anything you can derive from them. Furthermore, if you assert that something is true about the system, and it's true for all the time we're checking it, could you say it's true or false even if the code might be wrong?
+
+As an example, suppose we have a simple bookshop management system. We have books and authors as our entities. We also have a log of which books are sold, and the details of the sale. We're also using microservices, and an books service takes care of the management of books and authors etc, while an orders service takes care of recording sales and doing the coreography of shipping. Not really relevant, just to say that the orders are physically separate from the books, so things such as foreign keys etc. won't be available.
+
+[ schemas ]
+
+There are several things which we'd like to know about our system:
+
+- We have at least one book in our system.
+- Books have titles written in "This Format". Operators can enter the title in any form, but we should format this to this format.
+- Books should have at least an author.
+- Books with three or more authors have the "collective_work" bit set.
+- Orders must refer to a book which exists, and with it's properties. Assuming that the book is "static" - has a given price forever etc.
+
+Some of the tests can and should be enforced in the code, and tested via unittests etc. But, as in our SO case, sometimes the code becomes quite convoluted and the simple logic is hidden. So we'd like to just assert a general property about the system.
+
+[ some notes : one writes code that is testable, one should have data that is validationable ]
 
 ---
 [1] My favorite was a case where we had a parent entity in the jobs system with several child entities which needed to be mirroed on the ads system. Every entity was properly mirrored, but the parent-child relationship was not in several cases. Neither should have been mutable. But they were.
