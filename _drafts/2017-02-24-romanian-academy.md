@@ -7,15 +7,15 @@ The Romanian Academy [todo:link] has recently released the volume ["Romania's De
 
 People picked up on this and were quite mad. [Todo: better phrasing][Todo: links to LM and Republica].
 
-I'm writing this article with a contrarian spirit, and want to offer a counterpoint to the online consensus.
+I'm writing this article with a contrarian spirit, and want to offer a counterpoint to the online consensus that this is a terrible idea.
 
-First of, we shouldn't panic, nobody's forcing students. The Romanian Academy is a strange place. It's full of good people [link: mircea dumitru], but also quite dubious ones [
+First of, we shouldn't panic, nobody's forcing students to do anything anytime soon. The Romanian Academy doesn't have any power to set policy. It might have the ear of policymakers, but those need to filter their suggestions through the lens of public opinion. This thing is likely to spark protests from _all_ students, and lead to the rolling of the head of the education minister who'd propose it.
 
-This has caused some controversy online. People were not happy.
+Second, the proposal as is would butt heads with a lot of European and worldwide human rights legislation. If the issue wouldn't be solved internally, external pressure might work.
 
-Now, the Romanian Academy is not without it's faults [many links here]. It's defining characteristic is the Romanian part, rather than the Academy part. Contrast this with the US Academy of Science or the Royal Academy [ not RA, find equivalent in UK] etc., homologous institutions but which people respect much more highly.
+However, even a broken clock is right once a day. The folks at the Academy have righly identified the "brain drain" as a big issue facing the country. Their solution is quite blunt and there's a definite aroma of old-school communist authoritarianism to it, but it has _some_ kernel of usability to it.
 
-However even a broken clock is right once a day. I _do_ think there's something to what they're proposing, and against the spirit of the Internet, I think it's worthwhile to explore the idea.
+First, some background. I did a little bit of research. Turns out most countries in the European Union offer free or almost-free education to students, both citizens, EU nationals and international students. The only big countries where this doesn't happen is the UK and Poland. The situation is much the same globally, with the US, Canada, Australia etc standing out as countries with non-free tertiary education. In any case, most 
 
 First, some disclaimers. I am definitely a person who profited of this system. I got my schooling for free at the UPB. And shortly after I gratuated, I moved to London for 3 years. I'm back now, though. So I was a drained brain, for a while, so to say.
 Ironically, it was my talking with colleagues there that swayed my thinking on this. Our system is definitely not universal.
