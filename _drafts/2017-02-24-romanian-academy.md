@@ -1,7 +1,7 @@
 ---
 published: false
 ---
-The gist: there's some truth to what the academy is saying. There _is_ a problem, and we should be thinking of a solution to it. The way people are positioned towards higher education might need to be adjusted. 
+The gist: there's some truth to what the academy is saying. There _is_ a problem, and we should be thinking of a solution to it. The way people are positioned towards higher education might need to be adjusted. States and societies don't provide healthcare and education without looking at the benefits they stand to gain from them, in general. It's a case of actions which try to maximize the social good. However, with this setup, it's not the case that it is.
 
 The Romanian Academy [todo:link] has recently released the volume ["Romania's Development Strategy For The Next 20 Years - Volume III - Part 2"](http://www.acad.ro/bdar/strategiaAR/doc13/StrategiaIII_2.pdf). At almost 1000 pages it is quite the long and detailed read, and covers topics from education to finance and monetary policy. A thing stood out however. One of the proposals for education was requiring students who went to a public university [todo:better phrasing] to work in the country for a period of time equal to that in which they were students.
 
