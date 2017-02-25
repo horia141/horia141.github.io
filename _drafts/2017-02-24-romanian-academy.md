@@ -1,7 +1,15 @@
 ---
 published: false
 ---
-Quite recently, the Romanian Academy has released a sort of plan for the country. It's an ambitious project of things to fix in the country. One thing in particular stood out - their plan for fixing the brain drain. In short, they'd want people who leave the country straight after finishing their studies to pay back what the Romanian state has spent educating them.
+The gist: there's some truth to what the academy is saying. There _is_ a problem, and we should be thinking of a solution to it. The way people are positioned towards higher education might need to be adjusted. 
+
+The Romanian Academy [todo:link] has recently released the volume ["Romania's Development Strategy For The Next 20 Years - Volume III - Part 2"](http://www.acad.ro/bdar/strategiaAR/doc13/StrategiaIII_2.pdf). At almost 1000 pages it is quite the long and detailed read, and covers topics from education to finance and monetary policy. A thing stood out however. One of the proposals for education was requiring students who went to a public university [todo:better phrasing] to work in the country for a period of time equal to that in which they were students.
+
+People picked up on this and were quite mad. [Todo: better phrasing][Todo: links to LM and Republica].
+
+I'm writing this article with a contrarian spirit, and want to offer a counterpoint to the online consensus.
+
+First of, we shouldn't panic, nobody's forcing students. The Romanian Academy is a strange place. It's full of good people [link: mircea dumitru], but also quite dubious ones [
 
 This has caused some controversy online. People were not happy.
 
@@ -33,4 +41,6 @@ However, being free, people will squander it. Several authors complain about how
 
 As a side note, the system is _partially free_. Only your first go at higher education is free. If you want to follow a second university, you have to pay up. Ditto, there's a certain number of free places. But theres a minitority which is payed.
 
-[1] The decision has to be informed. In the US/UK people make the same mistakes, due to the availability of loans.
+Let's get one thing straight out of the way. Education is Romania is free in principle, but not in practice. Depending on one's inclinations there are costs like "fondul clasei", buying extra books from the school and the teachers get kickbacks, meditations, after-schools etc. And this is before one goes to university. Becoming a lawyer or nottary is quite difficult without a lot of $$$.
+
+[1] The decision has to be informed. In the US/UK people make the same mistakes, due to the availability of easy loans as well as the still pervasive belief that a university education will set one up for life, regardless of field or individual qualities.
