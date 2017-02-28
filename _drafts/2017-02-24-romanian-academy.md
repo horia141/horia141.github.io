@@ -3,6 +3,9 @@ published: false
 ---
 The gist: there's some truth to what the academy is saying. There _is_ a problem, and we should be thinking of a solution to it. The way people are positioned towards higher education might need to be adjusted. States and societies don't provide healthcare and education without looking at the benefits they stand to gain from them, in general. It's a case of actions which try to maximize the social good. However, with this setup, it's not the case that it is.
 
+Para: Make no mistake, the only real solution is to improve Romania to the point of people not wanting to leave en masse for a better life. It won't stop migration, of course, as that's something which affects every country, no matter how advanced. It might not even stop a Romanian brain drain, as countries such as Britain, France and Germany have their own drains, which are counter balanced by immigration from other countries. So it might make Romania an attractive target for immigration. The problem with _this_ solution is that it is incredibly hard to do. It will take at least 20 years to accomplish, by everyone's most optimistic estimate, and perhaps 50 years. The target is also moving. So it might be that with massive progress, we'd still be behind other countries. 
+It also hard because some of the best-and-brightest choose the path of exile. Tactic of governments since forever - let out troublemakers and leave only folks OK with the status quo, or old folks etc.
+
 The Romanian Academy [todo:link] has recently released the volume ["Romania's Development Strategy For The Next 20 Years - Volume III - Part 2"](http://www.acad.ro/bdar/strategiaAR/doc13/StrategiaIII_2.pdf). At almost 1000 pages it is quite the long and detailed read, and covers topics from education to finance and monetary policy. A thing stood out however. One of the proposals for education was requiring students who went to a public university [todo:better phrasing] to work in the country for a period of time equal to that in which they were students.
 
 People picked up on this and were quite mad. [Todo: better phrasing][Todo: links to LM and Republica].
@@ -27,5 +30,3 @@ I'd say a solution might actually work in the opposite way. Assuming that the be
 In the final section, I'd like to also address some of the criticisms to the idea. Many of them didn't stand right to me.
 
 A common idea heard in both articles and comments, was that the state would be acting as if it were giving a privilege to people, when in fact free university was the will of the people.
-
-
