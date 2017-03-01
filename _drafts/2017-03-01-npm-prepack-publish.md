@@ -3,7 +3,7 @@ published: false
 ---
 The other day I published a small package to [GitHub](https://github.com/horia141/npm-prepack-publish) and [NPM](https://www.npmjs.com/package/npm-prepack-publish). This post serves as documentation and tutorial.
 
-I wanted to have better control over what files are included into an NPM package. The classical approach to building a package is to call [`npm pack`](https://docs.npmjs.com/cli/pack). This includes files from the current directory, and is controlled by the [`files`](https://docs.npmjs.com/files/package.json#files) field in `package.json`. My main goal was to make imports be super easy. But many times the structure of the current directory and the simplicity of `npm pack` caused issues.
+I wanted to have better control over what files are included into an NPM package. The classical approach to building a package is to call [`npm pack`](https://docs.npmjs.com/cli/pack). This includes files from the current directory, and is controlled by the [`files`](https://docs.npmjs.com/files/package.json#files) field in `package.json`. My main goal was to make imports super easy. But many times the structure of the current directory and the simplicity of `npm pack` caused issues.
 
 For example, a common directory structure I use is:
 
@@ -78,3 +78,5 @@ It's hard to obtain something like:
 ```
 
 You have to specify either `src` in `files`, and end up with `misc`, or `src/client` and `src/server` and end up with a flattened hierarchy which leads to the same issues as above.
+
+To solve this issues I wrote a small NPM package. It's actually a bash script, but it's useful nonetheless thanks to NPM scripts.
