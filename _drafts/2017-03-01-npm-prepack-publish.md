@@ -1,7 +1,7 @@
 ---
 published: false
 ---
-The other day I published a small package to [GitHub](https://github.com/horia141/npm-prepack-publish) and [NPM][https://www.npmjs.com/package/npm-prepack-publish]. This post serves as documentation and tutorial.
+The other day I published a small package to [GitHub](https://github.com/horia141/npm-prepack-publish) and [NPM](https://www.npmjs.com/package/npm-prepack-publish). This post serves as documentation and tutorial.
 
 I wanted to have better control over what files are included into an NPM package. The classical approach to building a package is to call [`npm pack`](https://docs.npmjs.com/cli/pack). This includes files from the current directory, and is controlled by the [`files`](https://docs.npmjs.com/files/package.json#files) field in `package.json`. My main goal was to make imports be super easy. But many times the structure of the current directory and the simplicity of `npm pack` caused issues.
 
