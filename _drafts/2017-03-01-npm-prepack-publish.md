@@ -79,4 +79,8 @@ It's hard to obtain something like:
 
 You have to specify either `src` in `files`, and end up with `misc`, or `src/client` and `src/server` and end up with a flattened hierarchy which leads to the same issues as above.
 
-To solve this issues I wrote a small NPM package. It's actually a bash script, but it's useful nonetheless thanks to NPM scripts.
+To solve these issues I wrote `npm-prepack-publish`. It's actually a bash script, but it's useful nonetheless thanks to NPM scripts. It also does both the packing and publishing to NPM, or whatever repository `NPM_CONFIG_REGISTRY` you've set.
+
+Before using it, the `NPM_TOKEN` environment variable needs to be set. Actually using it is just a matter of calling `$(npm bin)/pack-and-publish` from the command line, or from a CI runner, or wherever. An example is the [`.travis.yml`](https://github.com/horia141/npm-prepack-publish/blob/master/.travis.yml) config file for the package itself.
+
+To configure how the archive is built, one 
