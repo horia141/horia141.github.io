@@ -83,4 +83,30 @@ To solve these issues I wrote `npm-prepack-publish`. It's actually a bash script
 
 Before using it, the `NPM_TOKEN` environment variable needs to be set. Actually using it is just a matter of calling `$(npm bin)/pack-and-publish` from the command line, or from a CI runner, or wherever. An example is the [`.travis.yml`](https://github.com/horia141/npm-prepack-publish/blob/master/.travis.yml) config file for the package itself.
 
-To configure how the archive is built, one 
+To configure how the archive is built, you need to specify the `filesPack` option in `package.json`. This is a dictionary, unlike `files`. The keys are files and directories and the values are how they're packed. Here's how the original example would look like:
+
+```
+...
+"filesPack": {
+  "package.json": "f:package.json",
+  "README.md": "f:README.md",
+  "fonts": "c:fonts",
+  "out": "e:."
+}
+...
+```
+
+This configuration will instruct `pack-and-publish` to copy the files `package.json` and `README.md` to the archive as is, and place them at the root of the archive. You can place them in other directories, and the files will be renamed, as well as change their names. The `fonts` directory will be copied as is to the archive. Finally, the contents out `out` will be expanded and placed in the root directory. The output will be:
+
+```
+- package.json
+- README.md
+- fonts
+  - wont.woff
+- index.d.ts
+- index.js
+- dependency.d.ts
+- dependency.js
+```
+
+This is exactly the desired behaviour. I'm still torn on whether I should separate the pushing from the packing though. Perhaps people will find utility just in the packing.
