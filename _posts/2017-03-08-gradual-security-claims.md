@@ -1,12 +1,18 @@
 ---
-published: false
+published: true
+title: Gradual Security Claims
+layout: post
+date: 2017-03-08T16:16:05.000Z
+categories: post
+tags: infosec cryptography whatsapp signal wikileaks
+comments: true
+math: false
 ---
-
 Wikileaks released the other day a treasure trove of documents describing the [CIAs hacking tools](https://news.ycombinator.com/item?id=13810015). There's a lot stuff in there, but at core it confirms the belief of many in the IT field, that most things one does on a connected device can be found out, even when the intention is not to. This includes phones and computers, but also more exotic devices such as smart TVs. Though not as cool as the [CIA's other toys](https://en.wikipedia.org/wiki/Lockheed_U-2), they are perhaps more fearsome. 
 
 There's no hope of security if the "attacker" has control of the computing machine, either through backdoors, or exploits. In the end you have to _trust_ something, and if that trust is misplaced the whole construction falls apart. Absolute security is impossible.
 
-To a certain extent, applications like [Signal](https://whispersystems.org/) or [WhatsApp](https://www.whatsapp.com/faq/en/general/28030015) which offer "security" as a feature are doing themselves a disservice by not qualifing their offering. Whenever something like this pops up, they are called out on their claims, and found to be lacking. Which is a shame, because they _do_ try, and their security offering is better than alternatives.
+To a certain extent, applications like [Signal](https://whispersystems.org/) or [WhatsApp](https://www.whatsapp.com/faq/en/general/28030015) which offer "security" as a feature are doing themselves a disservice by not qualifing their offering. Whenever something like this pops up, they are called out on their claims, and found to be lacking. Which is a shame, because they _do_ try, and their security offering is better than the alternatives.
 
 It doesn't really make sense though to say things like: _"your communication is safe, unless somebody has compromised your device and is intercepting your keystrokes"_. There's a million such  tweaks which all result in the same result - the security guarantees not holding up. Worse, much like a product with a long, thorough and honest list of disclaimers, potential users will be confused and dissuaded from using a piece of software, preferring a "better marketed" alternative in its place.
 
