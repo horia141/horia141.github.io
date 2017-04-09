@@ -1,11 +1,11 @@
 ---
 published: true
 layout: post
-date: {}
+date: 2017-04-09 12:00:05
 categories: post
 tags: life musings
-comments: false
-title: Life - Moments Vs Processes
+comments: true
+title: "Life - Moments Vs Processes"
 ---
 Chalk this up to random musings.
 
