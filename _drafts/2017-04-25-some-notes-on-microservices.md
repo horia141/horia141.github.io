@@ -9,4 +9,4 @@ However, many designs don't need strong consistency and can get by pretty well w
 
 As an example, a fairly standard microservice to have is one which deals with users and strictly identity related issues, such as user properties, friends etc. and the various auth flows. Oher services make use of this one, and have data associated with users, though stored in their own stores.
 
-A complication arises when a user removes their account. N
+A complication arises when a user removes their account. Naturally we want to inform every service and have them do their natural end-of-life scenarios for that user. Things like marking associated data as removed or sending a farewell email or removing externally stored pictures.
