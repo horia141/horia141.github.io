@@ -1,5 +1,11 @@
 ---
-published: false
+published: true
+layout: post
+date: 2017-04-25 20:11:05
+categories: post
+tags: distributed_systems microservices queue
+comments: true
+title: "Some Notes On Microservices"
 ---
 The hardest thing about building internet applications with microservices is the lack of transactions. While the production issues are nothing to scoff at either, they at least have solutions, either technical or cultural. However, while distributed transactions are possible in theory, in practice they impose too hefty of a performance penalty, and require the kind of deep integration and coordination between actors you aren't likely to encounter.
 
