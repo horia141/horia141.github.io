@@ -1,5 +1,12 @@
 ---
-published: false
+published: true
+title: "Raynor"
+layout: post
+date: 2017-05-15 16:16:05
+categories: post
+tags: raynor marshalling
+comments: false
+math: fals
 ---
 A little while ago I wrote and open-sourced a small Typescript/Javascript data marshalling library called [Raynor](https://github.com/horia141/raynor).
 
