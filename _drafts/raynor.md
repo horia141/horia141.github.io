@@ -2,17 +2,61 @@
 published: true
 title: "Raynor"
 layout: post
-date: 2017-05-15 16:16:05
+date: 2017-05-15 12:16:05
 categories: post
 tags: raynor marshalling
 comments: false
-math: fals
+math: false
 ---
+
+What needs to be talked about:
+
+ - Intro: what I've built. A link to the library. Short shout-out to technology involved.
+ - Smallest interesting example: an point class. Extract from string and call a method on it.
+ - Overview of what the library does, in bigger strokes. Speak about the main use case of describing objects from smaller pieces, and the general one of transforming raw objects into objects which have a certain structure. Where is this useful for. Input & output of the system. When calling into other systems. For storage. With some caveats. For UI validation before sending to the server.
+ - Tutorial
+   - This is a section which is meant as a "Introduction to Raynor" kind of thing. I'll cover the most common use cases.
+   - Speak about Marshallers. Perhaps define a very basic marshaller.
+   - Speak about the multitude of marshallers already in place for various types of data.
+   - Speak about annotated marshallers and how they're used.
+   - Speak about the framework of RaiseBuildFilter marshallers. How to extend the current primitive type marshallers. How to extend the object marshallers and some caveats.
+   - Other interesting marshallers: optional, oneof, arrayof, mapof etc.
+ - Comparison with other systems. When you might use this.
+
+Clean
+---
+
+A little while ago I wrote and open-sourced a small TypeScript/JavaScript data validation and marshalling library called [Raynor](https://github.com/horia141/raynor). Since it proved quite useful to use around the house, I figured I could do a little bit more with it than just dump it on GitHub. This article is a first step in that direction. It is an overview and tutorial of what Raynor is and how it operates. If you find this sort of stuff interesting I hope this will provide enough info for you to be able to try it in our own projects.
+
+A code example is worth `1000` bytes, so here's one before I say anything more:
+
+{% highlight js %}
+class User {
+    @MarshalWith(StringMarshaller)
+    name: string;
+    @MarshalWith(ArrayOf(NumberMarshaller))
+    scoresByDay: number[];
+
+    totalScore(): number {
+        return this.scoresByDay.reduce((a,b) => a + b, 0);
+    }
+}
+
+const um = new (MarshalFrom(User))();
+const u = new.extract(JSON.parse('{"name": "Raynor", "scoresByDay": [10, 20, 30]}'));
+console.log(u.totalScore()); // Prints 60
+{% endhighlight %}
+
+
+Dirty
+---
+
+
 A little while ago I wrote and open-sourced a small Typescript/Javascript data marshalling library called [Raynor](https://github.com/horia141/raynor).
 
 I want this article to serve as a tutorial and justification for its creation. To keep things interesting, here's a fairly contrived usage example, but which captures the essence none-the-less.
 
-```
+{% highlight js %}
 class Point {
   @MarshalWith(NumberMarshaller)
   x: number;
@@ -28,11 +72,10 @@ class Point {
 const pm = new (MarshalFrom(Point))();
 const p = pm.extract({x: 10, y: 20, z: 30});
 console.log(p.norm2()); // Prints out 500
-```
+{% endhighlight %}
 
 Tutorial
 ---
-
 
 
 The first concept to take note of is that of the `Marshaller`. It is the entity which transforms a _raw_ representation to a program one.
