@@ -47,6 +47,56 @@ const u = new.extract(JSON.parse('{"name": "Raynor", "scoresByDay": [10, 20, 30]
 console.log(u.totalScore()); // Prints 60
 {% endhighlight %}
 
+As you can see, the core idea is transforming a basic JS object into a more complicated one and checking that certain constraints apply. The actual input is usually the result of some sort of deserialization procedure. In this and many other cases, this would be JSON. But form encoding, URL encoding, some custom binary format etc. can all be used. Since there's such a great variety in both formats and implementations it is currently a non-goal for Raynor to deal with this aspect of marshalling.
+
+The rest of this article is split into two parts. The first is the actual tutorial. The second acts as a rationale for building it and a comparison with other similar systems.
+
+Tutorial
+---
+
+Raynor deals with one type of object of its own - the _marshaller_. It is the object which does the transformation and checking mentioned in the interface, through the `extract` method. It can act both ways, however. So, in our example `um` can also transform `u` back into a regular JS object, through the `pack` method. All marshallers are derived from the `Marshaller<T>` interface, which is quite small, and looks like this:
+
+{% highlight js %}
+interface Marshaller<T> {
+    extract(raw: any): T;
+    pack(cooked: T): any;
+}
+{% endhighlight %}
+
+The template type `T` represents the class to which the marshaller knows how to transform objects. The `extract` method usually does the heavy lifting. The input is `any`, and it commonly is `null`, a boolean, a number, a string, an array or an object. This fact must be checked however, since if a method expects an array, it should fail gracefully when encountering a number. When a condition is encountered which prevents the `raw` from being transformed, an `ExtractError` should be thrown. Finally, `pack` is the reverse of `extract` functionally-wise. Code-wise, it's more the case that it is a much simpler method than `extract`, as many of the validation steps are not needed.
+
+As an example, let's suppose we've encoded booleans as `'TRUE'` and `'FALSE'` in our application, and we wish to have a marshaller that can transform them into proper booleans. This is quite the contrived example, but it will help highlight most of the issues wof writing a marshaller from scratch. It might look something like this:
+
+{% highlight js %}
+class CapitalBooleanMarshaller implements Marshaller<boolean> {
+    extract(raw: any): boolean {
+        if (typeof raw !== 'string') {
+            throw new ExtractError('Expected a string');
+        }
+
+        const rawRaw = raw.toUpperCase();
+
+        if (rawRaw == 'TRUE') {
+            return true;
+        } else if (rawRaw == 'FALSE') {
+            return false;
+        } else {
+            throw new ExtractError('Expected either TRUE or FALSE');
+        }
+    }
+
+    pack(cooked: boolean): any {
+        return cooked ? 'TRUE' : 'FALSE';
+    }
+}
+{% endhighlight %}
+
+The simplest marshallers are those that produce a _primitive_ type. These often also consume a primitive type as well. These don't care about the internal structure of the object being transformed, but they do care about it following certain patterns. A classic example would be a marshaller for [IBANs](link-later).
+
+
+
+Raynor comes with a bunch of them already. There are marshallers for the basic types, which assume
+
 
 Dirty
 ---
