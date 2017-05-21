@@ -91,11 +91,21 @@ class CapitalBooleanMarshaller implements Marshaller<boolean> {
 }
 {% endhighlight %}
 
-The simplest marshallers are those that produce a _primitive_ type. These often also consume a primitive type as well. These don't care about the internal structure of the object being transformed, but they do care about it following certain patterns. A classic example would be a marshaller for [IBANs](link-later).
+Naturally, Raynor comes with a bunch of marshallers for the simple types of JavaScript. Things like numbers, booleans, strings, nulls, `Date`s etc. are handled from the start, so you can start building off them. There are also marshallers for very common objects based on these types. For example, `IntegerMarshaller` extends the `NumberMarshaller` and checks that the input is an integer. `PositiveIntegerMarshaller` goes a bit further and checks that the integer is positive. `IdMarshaller` is an alias for this one. `WebUriMarshaller` checks that a string input is in URI form and the protocol is either `http` or `https`. As a sidenote, my plan is to move these marshallers out of Raynor proper and into a second library, which would contain type definitions and marshallers for the common _business_ type objects one works with: IBANs, currency, geo locations, URIs, emails, etc.
 
+We'll go into more details about how these are implemented later in the article. But a very common way to build a marshaller is to start with an already existing marshaller, which expresses a certain constraint on the input, and add another constraint to it. For example, if your app's domain is `my-app.com` and you want to check that a particular resource you use has a URI from `my-app.com`, you could start with the `SecureWebUriMarshaller` and extend it like so:
 
+{% highlight js %}
+class MyAppUriMarshaller extends SecureWebUriMarshaller {
+    filter(uri: string): string {
+        if (!uri.startsWith('https://my-app.com/')) {
+            throw new ExtractError('Expected my-app URI');
+        }
 
-Raynor comes with a bunch of them already. There are marshallers for the basic types, which assume
+        return uri;
+    }
+}
+{% endhighlight %}
 
 
 Dirty
