@@ -1,8 +1,8 @@
 ---
 published: true
-title: "Raynor"
+title: Raynor
 layout: post
-date: 2017-05-15 12:16:05
+date: {}
 categories: post
 tags: raynor marshalling
 comments: false
@@ -107,6 +107,7 @@ class MyAppUriMarshaller extends SecureWebUriMarshaller {
 }
 {% endhighlight %}
 
+A great deal of use cases are covered by these marshallers and their extensions. However, as the inputs turn from simple types to objects, arrays or complex aggregates of them, it becomes tedious and even downright hard to write mardhallers for them. Luckily Raynor comed with a rich set of tools for dealing with these cases.
 
 Dirty
 ---
@@ -186,4 +187,3 @@ A second very common setup is that of using objects for data transfer. For this 
 Raynor draws heavy inspiration from [Json.Net](other) and JIL, and other C# libraries for marshalling JSON data to and from C# objects. It is distantly related to [Protocol Buffers](pb), [Thrift](thrift) etc, but there's some non-overlapping goals as well. Those are meant more for a straight-up description of the data, and have extra RPC bits as well. Raynor doesn't try to do RPC at all. Furthermore, Raynor is only for JavaScript for now, though the architecture can definitely be cloned in other languages with annotations, such as Python, C#, Java etc. But what sets Raynor apart is its attempt at further validating data than just looking at the type. An IBAN represented as a string is more than a string. It has a certain structure and only certain values are allowed.
 
 Now, necessarily the testing is "local". The classic example is the email. A string might look like a valid email address, but it might not _be_ a valid email address. The only test for this is actually sending an email and seeing that it's received. But that's a very hard operation to do, and one which depends on the time that it's done. So if we were to do it at the time an RPC is received, it might not keep.
-
