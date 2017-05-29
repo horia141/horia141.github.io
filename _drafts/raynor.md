@@ -2,11 +2,11 @@
 published: true
 title: Raynor
 layout: post
-date: {}
+date: 2017-05-15 12:16:05
 categories: post
 tags: raynor marshalling
 comments: false
-math: false
+math: true
 ---
 
 What needs to be talked about:
@@ -107,7 +107,108 @@ class MyAppUriMarshaller extends SecureWebUriMarshaller {
 }
 {% endhighlight %}
 
-A great deal of use cases are covered by these marshallers and their extensions. However, as the inputs turn from simple types to objects, arrays or complex aggregates of them, it becomes tedious and even downright hard to write mardhallers for them. Luckily Raynor comed with a rich set of tools for dealing with these cases.
+A great deal of use cases are covered by these marshallers and their extensions. However, as the inputs turn from simple types to objects, arrays or complex aggregates of them, it becomes tedious and even downright hard to write mardhallers for them. Luckily Raynor comed with a rich set of tools for dealing with these cases, in the form of a set of annotations for class definitions and the supporting infrastructure needed to turn these into marshallers automatically. The marshallers thus built implement the very common pattern of having a complex object be recursively broke down into smaller and simpler objects, which are handled by other types of marshallers.
+
+The initial example in the article used these annotations. We'll focus now on a different and bigger example now in order to dive deeper into the functionality put forth by Raynor.
+
+A classic thing to model is a mathematical point. For starters it might look like this:
+
+{% highlight js %}
+class Point {
+    @MarshalWith(NumberMarshaller)
+    x: number;
+    @MarhsalWith(NumberMarshaller)
+    y: number;
+
+    constructor(x: number, y: number) {
+        this.x = x;
+	this.y = y;
+    }
+
+    getNorm(): number {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
+}
+{% endhighlight %}
+
+The class has two public properties `x` and `y`, a constructor of two arguments, and an instance function `getNorm`, which returns the mathematical norm $\sqrt{xˆ2 + yˆ2}$. The strinking point is the `MarshalWith` annotation applied to the public properties. A you might have guessed, this informs Raynor of which marshaller to use when trying to construct a `Point`. Any sort of marshaller can be specified, but the actual argument must be a constructor function / class.
+
+In order to create a marshaller, the `MarshalFrom` function is used, which transforms an annotated class into a marshaller class. For example:
+
+{% highlight js %}
+const pm = new (MarshalFrom(Point))();
+const p = pm.extract(JSON.parse('{"x": 10, y: "20"}')
+console.log(pm);
+// Prints Point { x: 10, y: 20}
+console.log(pm.getNorm());
+// Prints 22.36
+{% endhighlight %}
+
+Notice the way the function is used with regards to `new`. What it returns is actually a constructor function / class, so you need to obtain an instance before any work can be done. The reason we do this instead of returning an instance directly is for compatibility with the `MarshalWith` annotation. It is very easy to compose marshallers in the same way we compose types. For example, a hypothetical rectangle would look like this:
+
+{% highlight js %}
+class Rectangle {
+    @MarshalWith(MarshalFrom(Point))
+    topLeft: Point;
+    @MarshalWith(NumberMarshaller)
+    width: number;
+    @MarhhalWith(NumberMarshaller)
+    height: number;
+}
+{% endhighlight %}
+
+You can probably intuit what the generated marshaller does. But in broad strokes, it first checks to see if its argument is an object. Then, for each annotated field `f` with a attached marshaller `Mf`, it tries to find the value for property `f` inside the input object, and, once found, use `Mf` to extract the value. This is then written to the property `f` of the output object. If any error is encountered, such as the input object not having a required field, or a sub-marshaller failing, the whole process stops and an `ExtractError` is raised.
+
+`MarshalWith` also accepts a second parameter, which is the name of the field in the original object. It is helpful when dealing with objects from external sources which might not follow your project's style. Our point class might look like this:
+
+{% highlight js %}
+class Point {
+    @MarhsalWith(NumberMarshaller, '__x') // __x gets mapped to x
+    x: number;
+    @MarshalWith(NumberMarshaller, '__y') // __y gets mapped to y
+    y: number;
+    // All the other stuff
+}
+{% endhighlight %}
+
+A very common pattern, especially for APIs which have been in use for longer periods of time and have seen features added and removed, is for objects to have optional fields in an object. Raynor provides the `OptionalOf` function to turn a regular marshaller into one which is optional, in the context of the annotation system. Extending points to three-dimensional space provides an excellent example for this:
+
+{% highlight js %}
+class Point {
+    @MarshalWith(NumberMarshaller)
+    x: number;
+    @MarhsalWith(NumberMarshaller)
+    y: number;
+    @MarshalWith(OptionalOf(NumberMarshaller))
+    z: number;
+}
+
+const pm = new (MarshalFrom(Point))();
+const p1 = pm.extract({x: 10, y: 20});
+console.log(p1);
+// Prints Point {x: 10, y: 20, z: null}
+const p2 = pm.extract({x: 10, y: 20, z: 30};
+console.log(p2);
+// Prints Point {x: 10, y: 20, z: 30}
+{% endhighlight %}
+
+- arrayof, dictof
+
+As a final point of behaviour, the marshaller produced by `MarshalFrom` ignores extra fields. It doesn't include them in the output object, even though they would still match the type required according to TypeScript, but it also doesn't raise an error when encountering them. This helps in general with data migration and service evolution inside your own application. It also helps when marshalling responses from external APIs, as only the bits of their response which interests you need be modelled, while the rest can be ignored.
+
+So far the tools provided have been good at modeling validation setups where an object is valid if all of its fields are valid. And, again, as with the simple marshallers, this captures a great deal of use cases. Fortunately, to capture more complex situations, there's no need to introduce a third component to Raynor, but rather build on the ones we already have. We need only extend a marshaller obtained via the annotations mechanism, and provide a `filter` function which describes the extra validation we want to do.
+
+Returning to our two-dimensional point example, suppose we want constrain our points to be on the unit circle. We could achieve this via:
+
+{% highlight js %}
+class UnitCirclePointMarshaller extends MarshalFrom(Point) {
+    filter(p: Point): boolean {
+        return p.getNorm() == 1;
+    }
+}
+{% endhighlight %}
+
+
 
 Dirty
 ---
