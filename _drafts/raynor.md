@@ -192,7 +192,21 @@ console.log(p2);
 // Prints Point {x: 10, y: 20, z: 30}
 {% endhighlight %}
 
-- arrayof, dictof
+Raynor comes with a bunch of other utility marshallers, such as `ArrayOf`, `MapOf`, `OneOf2`, `OneOf3`, `MarshalEnum` etc. Together they are meant to provide a rich language for describing the structure and constraints for objects. As an more complex example, consider:
+
+{% highlight js %}
+class Mesh {
+    @MarshalWith(ArrayOf(MarshalFrom(Point)))
+    points: Point[];
+    // A map of string->string
+    @MarshalWith(MapOf(StringMarshaller))
+    metadata: MarshalMap<string>;
+    @MarshalWith(OneOf2(StringMarshaller, NumberMarshaller))
+    id: string|number;
+}
+{% endhighlight %}
+
+Note that, in the near future, `MapOf` will be upgraded to work with the ES6 [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). There will be a similar `SetOf` which will work with [`Set`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set). There were some problems with TypeScript support for these when emitting to ES5, and I need to figure things out a little bit first, but hopefully it won't be long.
 
 As a final point of behaviour, the marshaller produced by `MarshalFrom` ignores extra fields. It doesn't include them in the output object, even though they would still match the type required according to TypeScript, but it also doesn't raise an error when encountering them. This helps in general with data migration and service evolution inside your own application. It also helps when marshalling responses from external APIs, as only the bits of their response which interests you need be modelled, while the rest can be ignored.
 
@@ -202,13 +216,39 @@ Returning to our two-dimensional point example, suppose we want constrain our po
 
 {% highlight js %}
 class UnitCirclePointMarshaller extends MarshalFrom(Point) {
-    filter(p: Point): boolean {
-        return p.getNorm() == 1;
+    filter(p: Point): Point {
+        if (p.getNorm() != 1) {
+           throw new ExtractError('Expected a point on the unit circle');
+        }
+        
+        return p;
     }
 }
 {% endhighlight %}
 
+TypeScript doesn't handle the case of extending a class expression quite well when generating a `.d.ts` file unfortunately for consumption by other packages. So if you want to expose `UnitCirclePointMarshaller` from a package, you'll have to compromise and code it like this:
 
+{% highlight js %}
+export class UnitCirclePointMarshaller extends Marshaller<Point> {
+    private static readonly _basicMarshaller = new (MarshalFrom(Point))();
+
+    extract(raw: any): Point {
+        return this.filter(_basicMarshaller.extract(raw));
+    }
+
+    pack(p: Point): any {
+        return _basicMarshaller.pack(p);
+    }
+
+    filter(p: Point): Point {
+        if (p.getNorm() != 1) {
+           throw new ExtractError('Expected a point on the unit circle');
+        }
+        
+        return p;
+    }
+}
+{% endhighlight %}
 
 Dirty
 ---
