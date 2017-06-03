@@ -22,6 +22,8 @@ What needs to be talked about:
    - Speak about the framework of RaiseBuildFilter marshallers. How to extend the current primitive type marshallers. How to extend the object marshallers and some caveats.
    - Other interesting marshallers: optional, oneof, arrayof, mapof etc.
  - Comparison with other systems. When you might use this.
+ - Phylosphy of what to validate.
+ - DTOs and storage objects.
 
 Clean
 ---
@@ -91,7 +93,24 @@ class CapitalBooleanMarshaller implements Marshaller<boolean> {
 }
 {% endhighlight %}
 
-Naturally, Raynor comes with a bunch of marshallers for the simple types of JavaScript. Things like numbers, booleans, strings, nulls, `Date`s etc. are handled from the start, so you can start building off them. There are also marshallers for very common objects based on these types. For example, `IntegerMarshaller` extends the `NumberMarshaller` and checks that the input is an integer. `PositiveIntegerMarshaller` goes a bit further and checks that the integer is positive. `IdMarshaller` is an alias for this one. `WebUriMarshaller` checks that a string input is in URI form and the protocol is either `http` or `https`. As a sidenote, my plan is to move these marshallers out of Raynor proper and into a second library, which would contain type definitions and marshallers for the common _business_ type objects one works with: IBANs, currency, geo locations, URIs, emails, etc.
+Builtin Marshallers
+===
+
+Naturally, Raynor comes with a bunch of marshallers for the simple types of JavaScript. Things like numbers, booleans, strings, nulls, `Date`s etc. are handled from the start, so you can start building off them. There are also marshallers for very common objects based on these types. For example, `IntegerMarshaller` extends the `NumberMarshaller` and checks that the input is an integer. `PositiveIntegerMarshaller` goes a bit further and checks that the integer is positive. `IdMarshaller` is an alias for this one. `WebUriMarshaller` checks that a string input is in URI form and the protocol is either `http` or `https`.
+
+For example:
+
+{% highlight js %}
+const uriMarshaller = new WebUriMarshaller();
+console.log(uriMarshaller.extract('http://example.com')); // Prints http://example.com
+try {
+    uriMarshaller.extract('ftp://example.com');
+} catch (e) {
+    console.log(e.name); // Prints 'ExtractError'
+}
+{% endhighlight %}
+
+As a sidenote, my plan is to move these marshallers out of Raynor proper and into a second library, which would contain type definitions and marshallers for the common _business_ type objects one works with: IBANs, currency, geo locations, URIs, emails, etc.
 
 We'll go into more details about how these are implemented later in the article. But a very common way to build a marshaller is to start with an already existing marshaller, which expresses a certain constraint on the input, and add another constraint to it. For example, if your app's domain is `my-app.com` and you want to check that a particular resource you use has a URI from `my-app.com`, you could start with the `SecureWebUriMarshaller` and extend it like so:
 
@@ -106,6 +125,9 @@ class MyAppUriMarshaller extends SecureWebUriMarshaller {
     }
 }
 {% endhighlight %}
+
+Building Marshallers For Classes
+===
 
 A great deal of use cases are covered by these marshallers and their extensions. However, as the inputs turn from simple types to objects, arrays or complex aggregates of them, it becomes tedious and even downright hard to write mardhallers for them. Luckily Raynor comed with a rich set of tools for dealing with these cases, in the form of a set of annotations for class definitions and the supporting infrastructure needed to turn these into marshallers automatically. The marshallers thus built implement the very common pattern of having a complex object be recursively broke down into smaller and simpler objects, which are handled by other types of marshallers.
 
@@ -159,6 +181,10 @@ class Rectangle {
 
 You can probably intuit what the generated marshaller does. But in broad strokes, it first checks to see if its argument is an object. Then, for each annotated field `f` with a attached marshaller `Mf`, it tries to find the value for property `f` inside the input object, and, once found, use `Mf` to extract the value. This is then written to the property `f` of the output object. If any error is encountered, such as the input object not having a required field, or a sub-marshaller failing, the whole process stops and an `ExtractError` is raised.
 
+
+More From The Annotations Toolkit
+===
+
 `MarshalWith` also accepts a second parameter, which is the name of the field in the original object. It is helpful when dealing with objects from external sources which might not follow your project's style. Our point class might look like this:
 
 {% highlight js %}
@@ -210,6 +236,9 @@ Note that, in the near future, `MapOf` will be upgraded to work with the ES6 [`M
 
 As a final point of behaviour, the marshaller produced by `MarshalFrom` ignores extra fields. It doesn't include them in the output object, even though they would still match the type required according to TypeScript, but it also doesn't raise an error when encountering them. This helps in general with data migration and service evolution inside your own application. It also helps when marshalling responses from external APIs, as only the bits of their response which interests you need be modelled, while the rest can be ignored.
 
+Extending Annotation Marshallers
+===
+
 So far the tools provided have been good at modeling validation setups where an object is valid if all of its fields are valid. And, again, as with the simple marshallers, this captures a great deal of use cases. Fortunately, to capture more complex situations, there's no need to introduce a third component to Raynor, but rather build on the ones we already have. We need only extend a marshaller obtained via the annotations mechanism, and provide a `filter` function which describes the extra validation we want to do.
 
 Returning to our two-dimensional point example, suppose we want constrain our points to be on the unit circle. We could achieve this via:
@@ -250,81 +279,8 @@ export class UnitCirclePointMarshaller extends Marshaller<Point> {
 }
 {% endhighlight %}
 
-Dirty
+Advanced: RaiseBuildFilter Marshallers
+===
+
+Background, Inspiration etc.
 ---
-
-
-A little while ago I wrote and open-sourced a small Typescript/Javascript data marshalling library called [Raynor](https://github.com/horia141/raynor).
-
-I want this article to serve as a tutorial and justification for its creation. To keep things interesting, here's a fairly contrived usage example, but which captures the essence none-the-less.
-
-{% highlight js %}
-class Point {
-  @MarshalWith(NumberMarshaller)
-  x: number;
-  
-  @MarshalWith(NumberMarshaller)
-  y: number;
-  
-  norm2(): number {
-      return this.x*this.x + this.y*this.y;
-  }
-}
-
-const pm = new (MarshalFrom(Point))();
-const p = pm.extract({x: 10, y: 20, z: 30});
-console.log(p.norm2()); // Prints out 500
-{% endhighlight %}
-
-Tutorial
----
-
-
-The first concept to take note of is that of the `Marshaller`. It is the entity which transforms a _raw_ representation to a program one.
-
-Marshallers work with JavaScript objects as inputs. This means null, booleans, numbers, strings, arrays and objects. If you've worked with other libraries like this one, you probably know that they take strings or byte streams as inputs. Raynor however doesn't deal with the "wire representation" and assumes there's some simple way of getting from the string/byte stream format to a JS object. And indeed there is. `JSON.parse`, url decoding etc. I plan on extending it to deal with this as well, but for now it isn't that urgent. There's simple and well known ways of doing this in JavaScript, and the extra complexity wasn't warranted. As outputs there are JavaScript objects as well. The simplest thing a marshaller can do is just check that a value corresponds to certain constraints and leave it like that. For example, an email marshaller might work like that. But it can also transform them. For exaple, a date time marshaller might take an number as an input and produce a DateTime object. Marshallers for classes will produce an instance of the class, rather than just checking that the input corresponds. In the initial example, we could call the `norm2` method on `p`, even though it originated in an instance of `Object`.
-
-`Marshaller<T>` is the core interface. It looks like this:
-
-```
-interface Marshaller<T> {
-    extract(raw: any): T
-    pack(packed: T): any
-}
-```
-
-`T` is the type the marshaller knows how to produce. The two methods `extract` and `pack` act as opposites of each other. They take and produce `any`s, so we can have Marshallers starting from numbers, strings, etc.
-
-Raynor comes ready made with a suite of Marshallers. This is expanding over time and I hope that every basic concept a programmer might encounter would be covered. As such we have:
-
- - Numbers - number, integer, positive integer etc.
- - Booleans
- - Null
- - DateTime
- - String - non-empty strings, strings of a certain length etc.
- 
-A very common setup is to have a primitive type with a certain setup. An email is a fine example. It's a string, but it has a certain format which must be adhered to. It's very easy to implement this pattern in Raynor, as all of the basic marshallers can be extended and a filter method can be implemented to apply extra filtering. For example, say you want to express the constraint that a DateTime should be later than the year 2000. You could do it like this:
-
-```
-class PostY2KDateMarshaller extends DateTimeMarshaller {
-    filter(date: DateTime): DateTime {
-        if (date.year < 2000) {
-            throw new ExtractError('Should be after 2000');
-        }
-        
-        return date;
-   }
-}
-```
-
-You can do this because all of the basic types are descendents from `RaiseBuildFilterMarshaller`. This implements a common pattern when marshalling. First an input is checked to be OK for further processing - the Raise operation. Then an more complex object is constructed from it - the Build operation. Finally, one or more filter steps is applied, in order to define proper values.
-
-For example, a datetime marshaller is a RaiseBuildFilterMarshaller, where the build step consists of checking that we're dealing with a positive number, build consists of transforming that number as a timestamp into a datetime object. There aren't any filter steps. A PositiveIntegerMarshaller also checks that there's a number as input, and build just leaaves the number alone. But there is a succession of two filters, one checks that we're dealing with an integer, and the last that we're dealing with a positive number. 
-
-All these are implemented as a hierarchy, which builds atop each other as much as possible. [ more details here ]
-
-A second very common setup is that of using objects for data transfer. For this Raynor has a nifty set of annotations which describe how the object is to be parsed and packed. Each field of an class is annotated and the appropriate marshaller is used to parse it. This allows the marshallers defined in the previous part as well as other custom marshallers and object marshallers to be used in the composition of an object. So you can very well say that an object has an `email` field and annotate it with an appropriate marshaller and expect it to be checked as such.
-
-Raynor draws heavy inspiration from [Json.Net](other) and JIL, and other C# libraries for marshalling JSON data to and from C# objects. It is distantly related to [Protocol Buffers](pb), [Thrift](thrift) etc, but there's some non-overlapping goals as well. Those are meant more for a straight-up description of the data, and have extra RPC bits as well. Raynor doesn't try to do RPC at all. Furthermore, Raynor is only for JavaScript for now, though the architecture can definitely be cloned in other languages with annotations, such as Python, C#, Java etc. But what sets Raynor apart is its attempt at further validating data than just looking at the type. An IBAN represented as a string is more than a string. It has a certain structure and only certain values are allowed.
-
-Now, necessarily the testing is "local". The classic example is the email. A string might look like a valid email address, but it might not _be_ a valid email address. The only test for this is actually sending an email and seeing that it's received. But that's a very hard operation to do, and one which depends on the time that it's done. So if we were to do it at the time an RPC is received, it might not keep.
