@@ -126,6 +126,22 @@ class MyAppUriMarshaller extends SecureWebUriMarshaller {
 }
 {% endhighlight %}
 
+You can even extend `MyAppUriMarshaller` once more, to perhaps only allow images, like so:
+
+{% highlight js %}
+class MyAppImageUriMarshaller extends MyAppUriMarshaller {
+    filter(uri: string): string {
+        if (!uri.endsWith('.jpg')) {
+            throw new ExtractError('Expected an image URI');
+        }
+
+        return uri;
+    }
+}
+{% endhighlight %}
+
+The order in which the `filter` methods are applied is from the base class up to the derived class, or from more general to more specific. So, for example, you can safely assume that the `uri` which makes it to `MyAppImageUriMarshaller` starts with `https://my-app.com/`.
+
 Building Marshallers For Classes
 ===
 
@@ -281,6 +297,83 @@ export class UnitCirclePointMarshaller extends Marshaller<Point> {
 
 Advanced: RaiseBuildFilter Marshallers
 ===
+
+Almost all marshallers you've seen here are descendent from `RaiseBuildFilterMarshaller<A, B>`. In fact, only some vary basic marshallers, such as the ones for booleans and `null`s, and the ones used in annotations aren't. Among other things, this marshaller contains the logic for filtering via a hierarchy of marshallers with the `filter` function.
+
+`RaiseBuildFilterMarshaller<A, B>` or `RBFM<A, B>` for short, captures a very common pattern when dealing with deserialization. It breaks down `extract` into three phases: raise, build and an optional filter. Conversely, it breaks down `pack` into two phases: unbuild and lower. Lower is the opposite of raise and ubuild the opposite of filter. Extract takes its input and passes it through the raise operation. This result is then sent through build. Finally, all of the defined filters are applied in the order of most general to most specific. Pack naturally does the reverse. It doesn't do any filtering, but straight up passes the input to unbuild, and the result of that to lower.
+
+The first phase, raise, does very basic checks on the input. Just enough to know that the `any` input is in fact a `number` and not an array or a null. The result of it is usually a JavaScript primitive or object. The type parameter `A` is the output of the `raise` method. The second phase, build, transforms this result into something more structured. Here a `number` might be turned into a `Date` or a `string` into an `EmailAddress`. The type parameter `B` is the output of the `build` method. The result of `build` is something structurally sound. The last phase, filter, which consists of a bunch of methods applied in series, usually apply different business type logic checks. For example, that the `Date` is from this year or that an `EmailAddress` has a certain format.
+
+`RBFM<A, B>` itself is an abstract class, and it is meant to be used as the base in hierarchies of marshallers, where the various marshallers implement different phases. For example, a direct descendant of `RBFM` might implement the raise and lower phases by implementing the `raise` and `lower` methods. A descendent of this one would implement the build and unbuild phases by implementing the `build` and `unbuild` methods. At this point, the latter marshaller is usable as is, since there are no abstract methods left to be implemented. But a whole hierarchy of marshallers can be built on top, each of which only specifying a `filter` function and gradually defining different constraints on the inputs.
+
+As an more concrete example, consider the builtin `PositiveIntegerMarshaller`. It is defined as:
+
+{% highlight js %}
+export class PositiveIntegerMarshaller extends IntegerMarshaller {
+    filter(b: number): number {
+	if (b <= 0) {
+	    throw new ExtractError('Expected a positive integer');
+	}
+
+        return b;
+    }
+}
+{% endhighlight %}
+
+It only defines a `filter` function which checks that the input is positive. `IntegerMarshaller`, in turn, is defined as:
+
+{% highlight js %}
+export class IntegerMarshaller extends NumberMarshaller {
+    filter(b: number): number {
+        if (Number.isInteger(b)) {
+            throw new ExtractError('Expected an integer');
+        }
+
+        return b;
+    }
+}
+{% endhighlight %}
+
+It again defines just a `filter` function which checks that the input is positive, via `Number.isInteger`. `NumberMarshaller`, is where things get more interesting. It looks like:
+
+{% highlight js %}
+export class NumberMarshaller extends BaseNumberMarshaller<number> {
+    build(a: number): number {
+	return a;
+    }
+
+    unbuild(b: number): number {
+	return b;
+    }
+}
+{% endhighlight %}
+
+So it implements the build phase of the `RBFM<A,B>`, with `B = number`. The phase itself is quite simple, being the identity function in both directions. Finally, `BaseNumberMarshaller<number>` looks like:
+
+{% highlight js %}
+export abstract class BaseNumberMarshaller<T> extends RaiseBuildFilterMarshaller<number, T> {
+    raise(raw: any): number {
+	if (typeof raw !== 'number') {
+	    throw new ExtractError('Expected a number');
+	}
+
+        // isNaN exists in modern browsers.
+	if ((Number as any).isNaN(raw) || raw == Number.POSITIVE_INFINITY || raw == Number.NEGATIVE_INFINITY) {
+	    throw new ExtractError('Expected a number');
+	}
+
+	return raw;
+    }
+
+    lower(a: number): any {
+	return a;
+    }
+}
+{% endhighlight %}
+
+It implements the raise phase of the `RBFM<A,B>`, with `A = number`. The phase is more involved, with checks for the input being a number, as well as it not being a strange value.
+
+There are many such hierarchies in the builtins of Raynor. The `DateMarshaller` is a similar one, and it also uses `BaseNumberMarshaller` but with `B = Date` this time, since it wants to transform a numeric timestamp to a `Date` object.
 
 Background, Inspiration etc.
 ---
