@@ -9,25 +9,6 @@ comments: false
 math: true
 ---
 
-What needs to be talked about:
-
- - Intro: what I've built. A link to the library. Short shout-out to technology involved.
- - Smallest interesting example: an point class. Extract from string and call a method on it.
- - Overview of what the library does, in bigger strokes. Speak about the main use case of describing objects from smaller pieces, and the general one of transforming raw objects into objects which have a certain structure. Where is this useful for. Input & output of the system. When calling into other systems. For storage. With some caveats. For UI validation before sending to the server.
- - Tutorial
-   - This is a section which is meant as a "Introduction to Raynor" kind of thing. I'll cover the most common use cases.
-   - Speak about Marshallers. Perhaps define a very basic marshaller.
-   - Speak about the multitude of marshallers already in place for various types of data.
-   - Speak about annotated marshallers and how they're used.
-   - Speak about the framework of RaiseBuildFilter marshallers. How to extend the current primitive type marshallers. How to extend the object marshallers and some caveats.
-   - Other interesting marshallers: optional, oneof, arrayof, mapof etc.
- - Comparison with other systems. When you might use this.
- - Phylosphy of what to validate.
- - DTOs and storage objects.
-
-Clean
----
-
 A little while ago I wrote and open-sourced a small TypeScript/JavaScript data validation and marshalling library called [Raynor](https://github.com/horia141/raynor). Since it proved quite useful to use around the house, I figured I could do a little bit more with it than just dump it on GitHub. This article is a first step in that direction. It is an overview and tutorial of what Raynor is and how it operates. If you find this sort of stuff interesting I hope this will provide enough info for you to be able to try it in our own projects.
 
 A code example is worth `1000` bytes, so here's one before I say anything more:
@@ -55,6 +36,8 @@ The rest of this article is split into two parts. The first is the actual tutori
 
 Tutorial
 ---
+
+Raynor is available on NPM as [raynor](https://www.npmjs.com/package/raynor). It's enough to install it via `npm install --save raynor`. Since it's written with TypeScript, it already contains its `.d.ts` files, so there's nothing extra for you to do.
 
 Raynor deals with one type of object of its own - the _marshaller_. It is the object which does the transformation and checking mentioned in the interface, through the `extract` method. It can act both ways, however. So, in our example `um` can also transform `u` back into a regular JS object, through the `pack` method. All marshallers are derived from the `Marshaller<T>` interface, which is quite small, and looks like this:
 
@@ -196,6 +179,8 @@ class Rectangle {
 {% endhighlight %}
 
 You can probably intuit what the generated marshaller does. But in broad strokes, it first checks to see if its argument is an object. Then, for each annotated field `f` with a attached marshaller `Mf`, it tries to find the value for property `f` inside the input object, and, once found, use `Mf` to extract the value. This is then written to the property `f` of the output object. If any error is encountered, such as the input object not having a required field, or a sub-marshaller failing, the whole process stops and an `ExtractError` is raised.
+
+The instance obtained from `extract` belongs to the correct class. In the previous example you could call `getNorm()` on it and it would work. There aren't many constraints for how the annotated class must look like. You can have a regular constructor, you can have methods and un-annotated properties. The only hard constraint is that calling the constructor with no arguments not leave the object in a really bad state, or somehow fail. So a constructor like the one for `Point` above is a-OK, but one which would complain via an exception if `x` is undefined would be a no-no. It is still best to think of such objects as DTOs, but now you have the possibility of adding a little bit of logic to them.
 
 
 More From The Annotations Toolkit
@@ -377,3 +362,17 @@ There are many such hierarchies in the builtins of Raynor. The `DateMarshaller` 
 
 Background, Inspiration etc.
 ---
+
+Raynor is by no means an original piece of work. It owes a debt of gratitude to [Protocol Buffers](https://developers.google.com/protocol-buffers/), [Thrift](http://thrift.apache.org/), [Avro](https://avro.apache.org/), [Cap'n Proto](https://capnproto.org/), [JSON Schema](http://json-schema.org/), [Json.NET](http://www.newtonsoft.com/json), and a host of other similar technologies, since people have been dealing with this stuff for quite some time.
+
+What it does add is an improvement in one of my personal pain-points, which is more involved checking of the actual input. I believe that when designing Internet applications we should be really thorough in how we model data and how we check the inputs and outputs of our systems are alright. And just looking at something structurally is many times not enough. Most other solutions look at the structure of the input and then do the most basic of type checks. JSON Schema goes a little bit further, since it has a set of builtin constraints on particular fields, but it doesn't go nearly far enough. So I wanted something which would allow the expression of more complex assertions about entities. This naturally involved expressing them in a programming language, rather than just declaratively. It also limited the initial solution to be bound to a programming language, rather than its own stand-alone IDL. The choice of JavaScript/TypeScript was natural because it's found on both clients and servers alike, and is quite popular to boot.
+
+A second improvement is that the entities produced by Raynor are instances of regular JavaScript classes. They aren't autogenerated by some tool and they aren't restricted _too much_. You can have extra methods on them, extra fields, an interesting constructor and you can even build them into hierarchies of classes or do more complex things with them. 
+
+A non-goal for Raynor was providing a "wire format". Tools like Protocol Buffers, Thrift etc. also define their own, and these dictate how an object is transformed into a representation suitable for transfer outside of the generating process' memory. Raynor doesn't do that, but rather relies on external mechanisms. Most of the time this means relying on JSON and `JSON.parse`/`JSON.stringify` for serialization and deserialization. This opens up the possibility for using different mechanisms which extend it's range of usages, however. URL encoding or form encoding are two examples, but also other methods of parsing JSON, such as `fetch`'s [`response.json`](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) or Express' [`body-parser`](https://www.npmjs.com/package/body-parser). As long as it can turn _bytes_ into a JavaScript object it can be used, basically.
+
+In the future it might be the case that some support for wire formats is added, for convenience's sake, but also to support more advanced usage, such as multiple levels of serialization.
+
+Another non-goal for Raynor was providing RPC "service definitions". This is mostly on account of trying to follow the old adage ["Do One Thing And Do It Well"](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well). Furthermore, RPC vs REST vs GraphQL vs what-have-you is not a done battle, and it's prudent to be agnostic to those things. Extra bits can be built upon it rather than tightly integrated, in any case.
+
+Anywho, I'll wrap up now, since this article is already many times larger than all the stuff I've written on the blog.
