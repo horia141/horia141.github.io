@@ -39,7 +39,7 @@ Tutorial
 
 Raynor is available on NPM as [raynor](https://www.npmjs.com/package/raynor). It's enough to install it via `npm install --save raynor`. Since it's written with TypeScript, it already contains its `.d.ts` files, so there's nothing extra for you to do.
 
-Raynor deals with one type of object of its own - the _marshaller_. It is the object which does the transformation and checking mentioned in the interface, through the `extract` method. It can act both ways, however. So, in our example `um` can also transform `u` back into a regular JS object, through the `pack` method. All marshallers are derived from the `Marshaller<T>` interface, which is quite small, and looks like this:
+Raynor deals with one type of object of its own - the _marshaller_. It is the object which does the transformation and checking mentioned in the introduction, through the `extract` method. It can act both ways, however. So, in our example `um` can also transform `u` back into a regular JS object, through the `pack` method. All marshallers are derived from the `Marshaller<T>` interface, which is quite small, and looks like this:
 
 {% highlight js %}
 interface Marshaller<T> {
@@ -48,7 +48,7 @@ interface Marshaller<T> {
 }
 {% endhighlight %}
 
-The template type `T` represents the class to which the marshaller knows how to transform objects. The `extract` method usually does the heavy lifting. The input is `any`, and it commonly is `null`, a boolean, a number, a string, an array or an object. This fact must be checked however, since if a method expects an array, it should fail gracefully when encountering a number. When a condition is encountered which prevents the `raw` from being transformed, an `ExtractError` should be thrown. Finally, `pack` is the reverse of `extract` functionally-wise. Code-wise, it's more the case that it is a much simpler method than `extract`, as many of the validation steps are not needed.
+The template type `T` represents the class which the marshaller produces. The `extract` method usually does the heavy lifting. The input is `any`, and it commonly is `null`, a boolean, a number, a string, an array or an object. This fact must be checked however, since if a method expects an array, it should fail gracefully when encountering a number. When a condition is encountered which prevents the `raw` from being transformed, an `ExtractError` should be thrown. Finally, `pack` is the reverse of `extract` functionally-wise. Code-wise, it's more the case that it is a much simpler method than `extract`, as many of the validation steps are not needed.
 
 As an example, let's suppose we've encoded booleans as `'TRUE'` and `'FALSE'` in our application, and we wish to have a marshaller that can transform them into proper booleans. This is quite the contrived example, but it will help highlight most of the issues with writing a marshaller from scratch. It might look something like this:
 
@@ -75,6 +75,8 @@ class CapitalBooleanMarshaller implements Marshaller<boolean> {
     }
 }
 {% endhighlight %}
+
+The input to `extract` is `any`, so the first thing to do is check that it is actually a string. So if somebody asked `CapitalBooleanMarshaller` to extract an array of strings, it would fail. The second step is to basically turn `"TRUE"` to `true` and `"FALSE"` to `false`. If the input is none of these things, another exception is raised. As stated, `pack` is much simpler than `extract`. This will usually be the case, as, intuitively, the data inside the application is already well-formed. It's only the data outside the application which poses problems.
 
 Builtin Marshallers
 ===
@@ -130,7 +132,7 @@ Building Marshallers For Classes
 
 A great deal of use cases are covered by these marshallers and their extensions. However, as the inputs turn from simple types to objects, arrays or complex aggregates of them, it becomes tedious and even downright hard to write marshallers for them. Luckily Raynor comes with a rich set of tools for dealing with these cases, in the form of a set of annotations for class definitions and the supporting infrastructure needed to turn these into marshallers automatically. The marshallers thus built implement the very common pattern of having a complex object be recursively broke down into smaller and simpler objects, which are handled by other types of marshallers.
 
-The initial example in the article used these annotations. We'll focus now on a different and bigger example now in order to dive deeper into the functionality put forth by Raynor.
+The initial example in the article used these annotations. We'll focus now on a different and bigger example in order to dive deeper into the functionality put forth by Raynor.
 
 A classic thing to model is a mathematical point. For starters it might look like this:
 
@@ -180,7 +182,7 @@ class Rectangle {
 
 You can probably intuit what the generated marshaller does. But in broad strokes, it first checks to see if its argument is an object. Then, for each annotated field `f` with a attached marshaller `Mf`, it tries to find the value for property `f` inside the input object, and, once found, use `Mf` to extract the value. This is then written to the property `f` of the output object. If any error is encountered, such as the input object not having a required field, or a sub-marshaller failing, the whole process stops and an `ExtractError` is raised.
 
-The instance obtained from `extract` belongs to the correct class. In the previous example you could call `getNorm()` on it and it would work. There aren't many constraints for how the annotated class must look like. You can have a regular constructor, you can have methods and un-annotated properties. The only hard constraint is that calling the constructor with no arguments not leave the object in a really bad state, or somehow fail. So a constructor like the one for `Point` above is a-OK, but one which would complain via an exception if `x` is undefined would be a no-no. It is still best to think of such objects as DTOs, but now you have the possibility of adding a little bit of logic to them.
+The instance obtained from `extract` belongs to the correct class. In the previous example you could call `getNorm()` on it and it would work. There aren't many constraints for how the annotated class must look like. You can have a regular constructor, methods and un-annotated properties. The only hard constraint is that calling the constructor with no arguments not leave the object in a really bad state, or somehow fail. So a constructor like the one for `Point` above is a-OK, but one which would complain via an exception if `x` is undefined would be a no-no. It is still best to think of such objects as DTOs, but now you have the possibility of adding a little bit of logic to them.
 
 
 More From The Annotations Toolkit
@@ -207,7 +209,7 @@ class Point {
     @MarhsalWith(NumberMarshaller)
     y: number;
     @MarshalWith(OptionalOf(NumberMarshaller))
-    z: number;
+    z: number|null;
 }
 
 const pm = new (MarshalFrom(Point))();
@@ -240,7 +242,7 @@ As a final point of behavior, the marshaller produced by `MarshalFrom` ignores e
 Extending Annotation Marshallers
 ===
 
-So far the tools provided have been good at modeling validation setups where an object is valid if all of its fields are valid. And, again, as with the simple marshallers, this captures a great deal of use cases. Fortunately, to capture more complex situations, there's no need to introduce a third component to Raynor, but rather build on the ones we already have. We need only extend a marshaller obtained via the annotations mechanism, and provide a `filter` function which describes the extra validation we want to do.
+So far the tools provided have been good at modeling validation setups where an object is valid if all of its fields are valid. And again, as with the simple marshallers, this captures a great deal of use cases. Fortunately, to capture more complex situations, there's no need to introduce a third component to Raynor, but rather build on the ones we already have. We need only extend a marshaller obtained via the annotations mechanism, and provide a `filter` function which describes the extra validation we want to do.
 
 Returning to our two-dimensional point example, suppose we want constrain our points to be on the unit circle. We could achieve this via:
 
@@ -263,11 +265,11 @@ export class UnitCirclePointMarshaller extends Marshaller<Point> {
     private static readonly _basicMarshaller = new (MarshalFrom(Point))();
 
     extract(raw: any): Point {
-        return this.filter(_basicMarshaller.extract(raw));
+        return this.filter(UnitCirclePointMarshaller._basicMarshaller.extract(raw));
     }
 
     pack(p: Point): any {
-        return _basicMarshaller.pack(p);
+        return UnitCirclePointMarshaller._basicMarshaller.pack(p);
     }
 
     filter(p: Point): Point {
@@ -285,13 +287,13 @@ Advanced: RaiseBuildFilter Marshallers
 
 Almost all marshallers you've seen here are descendent from `RaiseBuildFilterMarshaller<A, B>`. In fact, only some vary basic marshallers, such as the ones for booleans and `null`s, and the ones used in annotations aren't. Among other things, this marshaller contains the logic for filtering via a hierarchy of marshallers with the `filter` function.
 
-`RaiseBuildFilterMarshaller<A, B>` or `RBFM<A, B>` for short, captures a very common pattern when dealing with deserialization. It breaks down `extract` into three phases: raise, build and an optional filter. Conversely, it breaks down `pack` into two phases: unbuild and lower. Lower is the opposite of raise and unbuild the opposite of filter. Extract takes its input and passes it through the raise operation. This result is then sent through build. Finally, all of the defined filters are applied in the order of most general to most specific. Pack naturally does the reverse. It doesn't do any filtering, but straight up passes the input to unbuild, and the result of that to lower.
+`RaiseBuildFilterMarshaller<A, B>` or `RBFM<A, B>` for short, captures a very common pattern when dealing with deserialization. It breaks down `extract` into three phases: raise, build and an optional filter. Conversely, it breaks down `pack` into two phases: unbuild and lower. Lower is the opposite of raise and unbuild the opposite of build. Extract takes its input and passes it through the raise operation. This result is then sent through build. Finally, all of the defined filters are applied in the order of most general to most specific. Pack naturally does the reverse. It doesn't do any filtering, but straight up passes the input to unbuild, and the result of that to lower.
 
-The first phase, raise, does very basic checks on the input. Just enough to know that the `any` input is in fact a `number` and not an array or a null. The result of it is usually a JavaScript primitive or object. The type parameter `A` is the output of the `raise` method. The second phase, build, transforms this result into something more structured. Here a `number` might be turned into a `Date` or a `string` into an `EmailAddress`. The type parameter `B` is the output of the `build` method. The result of `build` is something structurally sound. The last phase, filter, which consists of a bunch of methods applied in series, usually apply different business type logic checks. For example, that the `Date` is from this year or that an `EmailAddress` has a certain format.
+The first phase, raise, does very basic checks on the input. Just enough to know that the `any` input is in fact a `number` and not an array or a null. The result of it is usually a JavaScript primitive or object. The type parameter `A` is the output of the `raise` method. The second phase, build, transforms this result into something more structured. Here a `number` might be turned into a `Date` or a `string` into an `EmailAddress`. The type parameter `B` is the output of the `build` method. The result of `build` is something structurally sound. The last phase - filter - which consists of a bunch of methods applied in series, usually checks different business type logic constraints. For example, that the `Date` is from this year or that an `EmailAddress` has a certain format.
 
 `RBFM<A, B>` itself is an abstract class, and it is meant to be used as the base in hierarchies of marshallers, where the various marshallers implement different phases. For example, a direct descendant of `RBFM` might implement the raise and lower phases by implementing the `raise` and `lower` methods. A descendent of this one would implement the build and unbuild phases by implementing the `build` and `unbuild` methods. At this point, the latter marshaller is usable as is, since there are no abstract methods left to be implemented. But a whole hierarchy of marshallers can be built on top, each of which only specifying a `filter` function and gradually defining different constraints on the inputs.
 
-As an more concrete example, consider the builtin `PositiveIntegerMarshaller`. It is defined as:
+As a more concrete example, consider the builtin `PositiveIntegerMarshaller`. It is defined as:
 
 {% highlight js %}
 export class PositiveIntegerMarshaller extends IntegerMarshaller {
@@ -319,7 +321,7 @@ export class IntegerMarshaller extends NumberMarshaller {
 }
 {% endhighlight %}
 
-It again defines just a `filter` function which checks that the input is positive, via `Number.isInteger`. `NumberMarshaller`, is where things get more interesting. It looks like:
+It again defines just a `filter` function which checks that the input is positive, via `Number.isInteger`. `NumberMarshaller` is where things get more interesting. It looks like:
 
 {% highlight js %}
 export class NumberMarshaller extends BaseNumberMarshaller<number> {
@@ -333,7 +335,7 @@ export class NumberMarshaller extends BaseNumberMarshaller<number> {
 }
 {% endhighlight %}
 
-So it implements the build phase of the `RBFM<A,B>`, with `B = number`. The phase itself is quite simple, being the identity function in both directions. Finally, `BaseNumberMarshaller<number>` looks like:
+So it implements the build phase of the `RBFM<A,B>` with `B = number`. The phase itself is quite simple, being the identity function in both directions. Finally, `BaseNumberMarshaller<number>` looks like:
 
 {% highlight js %}
 export abstract class BaseNumberMarshaller<T> extends RaiseBuildFilterMarshaller<number, T> {
@@ -365,14 +367,14 @@ Background, Inspiration etc.
 
 Raynor is by no means an original piece of work. It owes a debt of gratitude to [Protocol Buffers](https://developers.google.com/protocol-buffers/), [Thrift](http://thrift.apache.org/), [Avro](https://avro.apache.org/), [Cap'n Proto](https://capnproto.org/), [JSON Schema](http://json-schema.org/), [Json.NET](http://www.newtonsoft.com/json), and a host of other similar technologies, since people have been dealing with this stuff for quite some time.
 
-What it does add is an improvement in one of my personal pain-points, which is more involved checking of the actual input. I believe that when designing Internet applications we should be really thorough in how we model data and how we check the inputs and outputs of our systems are good. And just looking at something structurally is many times not enough. Most other solutions look at the structure of the input and then do the most basic of type checks. JSON Schema goes a little bit further, since it has a set of builtin constraints on particular fields, but it doesn't go nearly far enough. So I wanted something which would allow the expression of more complex assertions about entities. This naturally involved expressing them in a programming language, rather than just declaratively. It also limited the initial solution to be bound to a programming language, rather than its own stand-alone IDL. The choice of JavaScript/TypeScript was natural because it's found on both clients and servers alike, and is quite popular to boot.
+What it does add is an improvement in one of my personal pain-points, which is more involved checking of the actual input. I believe that when designing Internet applications we should be really thorough in how we model data and how we check the inputs and outputs of our systems. And just looking at something structurally is many times not enough. Unfortunately this is what most of the options from above do. JSON Schema goes a little bit further, since it has a set of builtin constraints on particular fields, but it doesn't go nearly far enough. So I wanted something which would allow the expression of more complex assertions about entities. This naturally involved expressing them in a programming language, rather than just declaratively. It also limited the initial solution to be bound to a programming language, rather than its own stand-alone IDL. The choice of JavaScript/TypeScript was natural because it's found on both clients and servers alike, and is quite popular to boot.
 
 A second improvement is that the entities produced by Raynor are instances of regular JavaScript classes. They aren't auto-generated by some tool and they aren't restricted _too much_. You can have extra methods on them, extra fields, an interesting constructor and you can even build them into hierarchies of classes or do more complex things with them. 
 
 A non-goal for Raynor was providing a "wire format". Tools like Protocol Buffers, Thrift etc. also define their own, and these dictate how an object is transformed into a representation suitable for transfer outside of the generating process' memory. Raynor doesn't do that, but rather relies on external mechanisms. Most of the time this means relying on JSON and `JSON.parse`/`JSON.stringify` for serialization and deserialization. This opens up the possibility for using different mechanisms which extend it's range of usages, however. URL encoding or form encoding are two examples, but also other methods of parsing JSON, such as `fetch`'s [`response.json`](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) or Express' [`body-parser`](https://www.npmjs.com/package/body-parser). As long as it can turn _bytes_ into a JavaScript object it can be used, basically.
 
-In the future it might be the case that some support for wire formats is added, for convenience's sake, but also to support more advanced usage, such as multiple levels of serialization.
+In the future it might be the case that some support for wire formats is added, for convenience's sake, but also to support more advanced usage, such as multiple levels of serialization applied to a single entity.
 
-Another non-goal for Raynor was providing RPC "service definitions". This is mostly on account of trying to follow the old adage ["Do One Thing And Do It Well"](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well). Furthermore, RPC vs REST vs GraphQL vs what-have-you is not a done battle, and it's prudent to be agnostic to those things. Extra bits can be built upon it rather than tightly integrated, in any case.
+Another non-goal for Raynor was providing RPC "service definitions". This is mostly on account of trying to follow the old adage ["Do One Thing And Do It Well"](https://en.wikipedia.org/wiki/Unix_philosophy#Do_One_Thing_and_Do_It_Well). Furthermore, RPC vs REST vs GraphQL vs what-have-you is not a done battle, and it's prudent to be agnostic to these things. Extra bits can be built upon it rather than tightly integrated, in any case.
 
-Anywho, I'll wrap up now, since this article is already many times larger than all the stuff I've written on the blog.
+Anywho, I'll wrap up now, since this article is already quite large. Hope it was an interesting read as well.
