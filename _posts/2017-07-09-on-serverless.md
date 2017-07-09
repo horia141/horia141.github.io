@@ -36,6 +36,7 @@ There’s still a lot of uncharted waters and a lot of things for the industry a
 Extra references:
 
 - [Serverless computing](https://en.wikipedia.org/wiki/Serverless_computing)
+- [What is serverless](https://auth0.com/blog/what-is-serverless/)
 - [Serverless Architectures](https://martinfowler.com/articles/serverless.html)
 - [Serverless: the next big transition?](https://conferences.oreilly.com/software-architecture/sa-ny/public/content/the-next-big-transition)
 - [Serverless architecture in short](https://specify.io/concepts/serverless-baas-faas)
