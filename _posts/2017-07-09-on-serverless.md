@@ -40,7 +40,6 @@ Extra references:
 - [Serverless Architectures](https://martinfowler.com/articles/serverless.html)
 - [Serverless: the next big transition?](https://conferences.oreilly.com/software-architecture/sa-ny/public/content/the-next-big-transition)
 - [Serverless architecture in short](https://specify.io/concepts/serverless-baas-faas)
-- [A look at serverless architectures](https://dzone.com/articles/serverless-architecture-1)
 - [Serverless vs PaaS and Docker: Three-legged shaved Yaks](https://serverless.zone/serverless-vs-paas-and-docker-three-legged-hairless-yaks-f2c4191b1ed6)
 - [FaaS, PaaS, and the benefits of serverless architecture](https://www.infoq.com/news/2016/06/faas-serverless-architecture)
 - [The 12 Factor App](https://12factor.net/)
