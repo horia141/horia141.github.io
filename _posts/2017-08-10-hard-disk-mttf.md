@@ -1,6 +1,6 @@
 ---
 published: true
-title: "How Many Hard Disk Failures From MTTF"
+title: "Average Number Of Machine Failures In A Datacenter Given Just The Mean Time To Failure"
 layout: post
 date: 2017-08-10 11:29
 categories: post
