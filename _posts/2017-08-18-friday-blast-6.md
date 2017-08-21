@@ -1,6 +1,6 @@
 ---
 published: true
-title: "Friday Blast #7"
+title: "Friday Blast #6"
 layout: post
 date: 2017-08-18 10:39
 categories: post
