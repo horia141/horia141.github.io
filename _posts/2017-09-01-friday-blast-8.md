@@ -2,6 +2,10 @@
 published: true
 layout: post
 date: '2017-09-01 10:32'
+categories: post
+tags: friday_blast links
+comments: true
+math: false
 ---
    
 
