@@ -9,7 +9,7 @@ math: false
 ---
 This is a book review for [Designing Data-Intensive Applications](https://dataintensive.net/), by [Martin Kleppmann](https://martin.kleppmann.com/). The _tl;dr_ is that this is a very good book and you should go out and read it. It's the kind of book where you can genuinely feel a better developer at the end of it than at the start.
 
-The target audience is builders of Internet applications. Specifically, folks who need to deal with the _backend_ of things. Thus it deals with databases, services, message queues and the like. The core issue is, of course, handling data in single-machine and distributed systems - and handling lots of it. And that's rather fitting because in such systems organizing and properly accessing data is the hard part.
+The target audience is builders of Internet applications. Specifically, folks who need to deal with the _backend_ of things. Thus it deals with databases, services, message queues and the like. The core issue is, of course, handling data in single-machine and distributed systems - and handling lots of it. And that's rather fitting because in such systems organizing and properly accessing data is the hard part. I'd argue though that the book deals with or can only provide advice for "data-intensive" applications. That is, applications dealing with TBs of data per day and processing of PBs of data. Even people who work with _small data_ need to know these things. And perhaps it's even more important in this context in order to avoid hard to detect bugs. An badly written transaction will be quickly discovered at `1000` QPS, but less so at `10` QPS.
 
 There's three parts two the book, all roughly equal in length, but not in the difficulty of the material.
 
