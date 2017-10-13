@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: '2017-10-06 11:30
+date: '2017-10-06 11:30'
 categories: post
 tags: friday_blast links
 comments: true
