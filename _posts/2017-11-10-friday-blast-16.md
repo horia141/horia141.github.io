@@ -1,12 +1,12 @@
 ---
 published: true
 layout: post
-date: '2017-11-03 10:30'
+date: '2017-11-10 10:30'
 categories: post
 tags: friday_blast links
 comments: true
 math: true
-title: 'Friday Blast #15'
+title: 'Friday Blast #16'
 ---
 
 [Tough Cookies (2017)](https://scotthelme.co.uk/tough-cookies/) - the 2017 guide to making secure cookies. They should be http only, secure, have the same site attribute and use prefixes. This protects against XSS and XSRF attacks in a first instance, as well as ensure the cookies are essentially restricted to the role of association information for user state.
