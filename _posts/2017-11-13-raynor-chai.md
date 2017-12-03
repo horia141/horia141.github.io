@@ -11,7 +11,7 @@ This post is about [raynor-chai](https://github.com/horia141/raynor-chai), a nif
 
 Using it looks something like this:
 
-{% highlight typescript %}
+{% highlight js %}
 import * as chai from 'chai'
 import { raynorChai } from 'raynor-chai'
 
