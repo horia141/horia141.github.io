@@ -6,6 +6,7 @@ categories: post
 tags: book_review
 comments: true
 math: false
+title: 'Designing Data Intensive Applications Review'
 ---
 This is a book review for [Designing Data-Intensive Applications](https://dataintensive.net/), by [Martin Kleppmann](https://martin.kleppmann.com/). The _tl;dr_ is that this is a very good book and you should go out and read it. It's the kind of book where you can genuinely feel a better developer at the end of it than at the start.
 
