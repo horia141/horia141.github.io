@@ -20,3 +20,4 @@ A video heavy link set today. Hope you enjoy.
 [Transactions: myths, surprises and opportunities (2015) #talk](https://www.youtube.com/watch?v=5ZjhNTM8XU8) - basically covers ACID, Isolation Levels and serialization anomalies plus a bit of history about how they came about. Entertaining speaker and nice presentation of the concepts.
 
 [Purely functional datastructures (2015) #talk](https://www.youtube.com/watch?v=KtltiBfvqCE) - a brief introduction to a very interesting topic - building data-structures without mutation & persistent datastructures. The speaker managed to cover stacks and queues. Not to dissapoint, the topics are quite hard. Even the simple queue ends up being quite complex when designed to be immutable/persistent _and_ performant.
+
