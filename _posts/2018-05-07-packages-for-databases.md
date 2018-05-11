@@ -23,7 +23,7 @@ But it doesn’t have to hurt this way and there’s a precedent for things gett
 
 Let’s consider a bunch of examples. On one end of the spectrum, people still rent a VPS and then manually SSH into it and copy local files in order to make a deployment, like they did in “olden times”. Sometimes a script or three might be involved, but the process is very basic and direct that way. On the other end of the spectrum, you have well developed and automated code deployment pipelines, package repositories, rollout managers etc. Whole systems for managing other systems if you will. These days it’s not really even an issue of evolving from one to the other _as you get big_ or as the need arises because you can start any project regardless of size with a host of advanced tools, and get a ton of benefits.
 
-My take is that database interactions are at the SSH and file copy end. And we’d ideally would like them to be in the opposite end.
+My take is that database interactions are at the SSH and file copy end. And we ideally would like them to be in the opposite end.
 
 Now the nice thing is that if you squint hard enough, databases and compute components are quite similar - both allow user-specified code to be executed. In the latter case to interact with other services or databases, while in the former to interact with the data itself. And since what works for the goose, works for the gander, we can try to emulate the developments in compute to jump start database ones.
 
@@ -36,4 +36,4 @@ I’ve spoken about relational databases so far. But this issues isn’t limited
 Anyway this is the big idea. At this point in the article I should plug my side project or product which provides all of the above and more for Postgres/MySQL/SQL Server. But there’s no such thing yet or for the foreseeable future. It’s just my wishful thinking. But I do think it’s a neat idea and if you want to run away with it and actually build something you’d have a first user in me.
 
 ---
-[1] Though this approach has always felt like a compromise to me. And why is it that we’re moving as an industry towards infrastructure as code and are happy to let `terraform` manage transforming a declarative description of the infrastructure into actual cloud provider commands, but we don’t want the same for schemas? Perhaps it’s time for _schema as code_?
+[1] Though this approach has always felt like a compromise to me. And why it that we’re moving as an industry towards infrastructure as code and are happy to let `terraform` manage transforming a declarative description of the infrastructure into actual cloud provider commands, but we don’t want the same for schemas? Perhaps it’s time for _schema as code_?
