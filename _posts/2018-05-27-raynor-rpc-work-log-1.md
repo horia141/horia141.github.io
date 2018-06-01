@@ -181,7 +181,7 @@ async function markBadBooks(): Promise<Book[]> {
 
 Ok, so that should be a rough outline of a v1 API for client and server components. It should be pretty familiar to people who've encountered gRPC/Thrift before. And hopefully it should be intuitive enough for everyone else. One important thing to notice is that on the client side there isn't anything to _code_ in order to use this. Everything is done by the library, because all that _can_ be done is usually very repetitive and mechanic. And I'm referring here to things like - argument marshalling, HTTP connection setup, waiting for the response and parsing it and checking that it's valid, handling various errors etc. On the server side there's the same concerns, but you also have to code a bit. But just the actual _important_ parts. Once a method like `updateBooks` executes, you can be sure that `title` exists and is a string, or that `bookId` is a non-negative integer.
 
-Codewise, there's some _sketches_ at [github.com/raynor-rpc](https://github.com/raynor-rpc) - but it's marked with version `'0.0.0'` for a reason. It's basically just enough to check that the annotations based API will work, but nothing more. As I'll build on it I'll post new articles and hopefully I can build a nice series out of this.
+Codewise, there's some _sketches_ at [github.com/raynor-rpc](https://github.com/horia141/raynor-rpc) - but it's marked with version `'0.0.0'` for a reason. It's basically just enough to check that the annotations based API will work, but nothing more. As I'll build on it I'll post new articles and hopefully I can build a nice series out of this.
 
 ---
 
