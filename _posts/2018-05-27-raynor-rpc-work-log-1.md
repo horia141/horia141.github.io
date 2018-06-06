@@ -32,7 +32,7 @@ Now, I'd _like_ to get the code to look like the following small example. Suppos
 {% highlight ts %}
 // In index.ts
 import { ArrayOf, MarshalWith, MarshalFrom } from 'raynor'
-import { doRpc, Rpc, RpcOutput, RpcParam } from 'raynor-rpc'
+import { nop, Method, Output, Param, Throws } from 'raynor-rpc'
 import * as r from 'raynor'
 
 // A pretty standard Raynor annotated class. It is our service's _entity_.
@@ -56,29 +56,29 @@ export class TestBookError extends Error {
 // make it to the JavaScript side. Ditto for abstract methods. So we have to use
 // a regular class, with a bit of library-provided glue to make things work.
 export class LibraryService {
-    // The @Rpc annotation marks a method as being a remote procedure call.
-    // The doRpc() method is provided as a placeholder so TypeScript won't
+    // The @Method annotation marks a method as being a remote procedure call.
+    // The nop() method is provided as a placeholder so TypeScript won't
     // complain. You can technically provide any body, but it _will_ be
     // ignored in the generated client and server classes. This _must_ be
     // an async function returning a `Promise`. At some point it will be
     // possible to check at runtime for this in the annotation, but not yet.
-    @Rpc() @Idempotent
-    @RpcOutput(ArrayOf(MarshalFrom(Book)))
+    @Method() @Idempotent
+    @Output(ArrayOf(MarshalFrom(Book)))
     async getBooks(): Promise<Book[]> {
-        return doRpc();
+        return nop();
     }
 
     // The possible errors which can be thrown also need to be marked. Java
     // says hello! I'm not married to this idea though, and later designs
     // might drop it, with some small _reduction_ in the information carried
     // along with errors.
-    @Rpc()
-    @RpcOutput(MarshalFrom(Book))
-    @RpcThrows(TestBookError)
+    @Method()
+    @Output(MarshalFrom(Book))
+    @Throws(TestBookError)
     async updateBooks(
-        @RpcParam(r.IdMarshaller) bookId: number,
-        @RpcParam(r.StringMarshaller) newTitle: string): Promise<Book> {
-        return doRpc(bookId, newTitle);
+        @Param(r.IdMarshaller) bookId: number,
+        @Param(r.StringMarshaller) newTitle: string): Promise<Book> {
+        return nop(bookId, newTitle);
     }
 
     // It's perfectly fine to have non @Rpc-ed methods here. They will be
