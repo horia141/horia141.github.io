@@ -1,12 +1,12 @@
 ---
 published: true
 layout: post
-date: '2018-06-22 07:00'
+date: '2018-06-29 07:00'
 categories: post
 tags: friday_blast links
 comments: true
 math: true
-title: 'Friday Blast #43'
+title: 'Friday Blast #44'
 ---
 
 [High-performance rate limiting (2016)](https://medium.com/smyte/rate-limiter-df3408325846) - how Smyte does rate-limiting, with a fairly custom rate-limiter. Truth be told, these usually aren't found off-the-shelf.
