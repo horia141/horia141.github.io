@@ -8,7 +8,7 @@ comments: true
 math: true
 title: 'Friday Blast #63'
 ---
-[The obvervability pipeline (2018)](https://bravenewgeek.com/the-observability-pipeline/) - the case for treating metrics/logs/traces data as "another dataset" rather than something different. For example, sending them first to a central collection point (Kafka or equivalent) and then dispersing them to all the "targets" that need them - logging infra, metrics and alerting, even to a data lake so they're available as business metrics. The main idea is to stop `NxM` problems with this data and introduce some decoupling so it's easier to switch infra providers later down the road.
+[The observability pipeline (2018)](https://bravenewgeek.com/the-observability-pipeline/) - the case for treating metrics/logs/traces data as "another dataset" rather than something different. For example, sending them first to a central collection point (Kafka or equivalent) and then dispersing them to all the "targets" that need them - logging infra, metrics and alerting, even to a data lake so they're available as business metrics. The main idea is to stop `NxM` problems with this data and introduce some decoupling so it's easier to switch infra providers later down the road.
 
 [Extended validation certificates are dead (2018)](https://www.troyhunt.com/extended-validation-certificates-are-dead/) - the message is important - don't waste money on EVs and just use a regular certificate. The rest of this (really long) pieces seems like it's taking the piss on Comodo cybersecurity.
 
