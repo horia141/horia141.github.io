@@ -3,7 +3,7 @@ published: true
 layout: post
 date: '2019-02-16 07:00'
 categories: post
-tags: friday_blast links
+tags: book_review
 comments: true
 math: true
 title: "The Manager's Path Review"

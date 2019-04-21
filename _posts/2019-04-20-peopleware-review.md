@@ -3,7 +3,7 @@ published: true
 layout: post
 date: '2019-04-20 07:00'
 categories: post
-tags: review
+tags: book_review
 comments: true
 math: true
 title: Peopleware Review'
