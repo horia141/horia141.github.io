@@ -6,7 +6,7 @@ categories: post
 tags: book_review
 comments: true
 math: true
-title: Peopleware Review'
+title: 'Peopleware Review'
 ---
 Managed to finish [Peopleware](https://www.amazon.com/Peopleware-Productive-Projects-Tom-DeMarco/dp/0932633439) this last week. It’s a classic of software development, so it barely needs an introduction or review from me. But since it’s been a while since the last non-”Friday Blast” article, here we go.
 
