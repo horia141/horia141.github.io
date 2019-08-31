@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: '2019-08-23 07:00'
+date: '2019-08-30 07:00'
 categories: post
 tags: friday_blast links
 comments: true
