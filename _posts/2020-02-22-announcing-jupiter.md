@@ -10,7 +10,7 @@ Today I’m releasing a small open source project. It’s been a while since I d
 
 The project is named [jupiter](https://github.com/horia141/jupiter) and it’s a small application for goals management, task tracking, habit building, and all that jazz. More precisely it adds a bunch of magic to [Notion.so](https://notion.so) - an already existing and quite good productivity app which is a sort of cross between Trello, Jira, and Confluence. The “magic” is just a bunch of conventions on how work is organized. There is a growing set of CLI scripts for maintaining these conventions and automating such things like recurring task creation, task archival, etc. But yeah, you read that right, it's a CLI app right now. It’s a surprisingly convenient form given that most of the interaction happens via Notion. Realistically I would not have had the bandwidth for anything else - be it webapp, native app, desktop app, Electron, or any other form modern consumer facing apps take.
 
-![Jupiter Demo](/assets/jupiter-demo-anim.gif)
+![Jupiter Demo](/assets/jupiter-demo-anim2.gif)
 
 You can checkout the code itself on GitHub. There’s a short tutorial there too. But I’ll cover some of that material here as well. The rest of the post is divided in two. I’ll speak a bit about how the project came about, and then I’ll deep dive into the tutorial.
 
