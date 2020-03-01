@@ -114,7 +114,7 @@ jobs:
      - name: Build the docker image
        run: make docker-build
      - name: Publish the docker image
-       run: echo ${{ secrets.DOCKERHUB_TOKEN }} | make docker-push
+       run: echo $(( secrets.DOCKERHUB_TOKEN )) | make docker-push
 ```
 
 OK, this should be about it. Took a bit of time, but hopefully the gradual buildup of something more professional-looking can help you in your projects. There’s still a bunch to go for the future:
