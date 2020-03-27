@@ -86,7 +86,7 @@ seem very heavyweight for a single-repo case. Therefore I just copy-pasted the `
 `Release` workflow. Part of good software engineering is to know when it's alright to repeat yourself!
 
 With the above accomplished, there was a nice process setup - a basic linter hooked into `make`, the IDE
-and the CI system (which triggered it on every build). So it was time to extend it "horizontally" by adding
+and the CI system (which triggered it on every push). So it was time to extend it "horizontally" by adding
 more and varied linters. In the end there is:
 
 * The main focus was of course on the Python sources.
