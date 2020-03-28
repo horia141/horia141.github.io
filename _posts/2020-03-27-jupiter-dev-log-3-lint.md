@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jupiter Dev Log 3 - Lint All The Thing"
+title: "Jupiter Dev Log 3 - Lint All The Things"
 date: 2020-03-27 07:20:05
 categories: post
 tags: jupiter
@@ -23,7 +23,7 @@ But in between these two releases, the biggest change has been adding support fo
 journey, and I'll cover it in the rest of the post.
 
 As a refresher, "linting" is a lightweight process of source code analysis, meant to spot _syntactic_ and _style_
-errors. It's a fuzzy definition, and many linters do some sort of 
+errors. It's a fuzzy definition, and many linters do some sort of
 [static analysis](https://en.wikipedia.org/wiki/Static_program_analysis) too. It's the first work of quality control
 I've done on Jupiter, but not the last. Type annotations and testing will surely come in the future.
 
@@ -35,7 +35,7 @@ it'll come. But of course, that is not all that's found in the repository. So my
 The second and third question I had to answer was "what tools to use?" and "how to integrate them into the system"?
 As an example, for the Python code in `src` I started out with [`pylint`](https://www.pylint.org/) which is the
  canonical Python linter. I added the `./scripts/lint-sources.sh` script with the following form:
- 
+
  ```bash
 #!/bin/bash
 
@@ -107,7 +107,7 @@ more and varied linters:
       to `command`, cause apparently there was a deprecated ancient Python system module named
       [`commands`](https://docs.python.org/2/library/commands.html) which still tripped the linters up
       and made them require a different sorting order.
-    * My main gripe would be that there were _so many_ linting and analysis tools. There's about as many 
+    * My main gripe would be that there were _so many_ linting and analysis tools. There's about as many
       I didn't include for one reason or another.
 * For the Dockerfile I used [hadolint](https://github.com/hadolint/hadolint). This I had to actually use
   directly as a Docker image / container. As a side-note, it's becoming more common to see CLI apps packaged
@@ -122,11 +122,11 @@ more and varied linters:
 * For the `yaml` files I used [`yamllint`](https://yamllint.readthedocs.io/). I hooked both the toplevel
   files here (`mkdocs.yml` and `.readthedocs.yml`) and the workflows under `.github`. Again, a bunch of
   small stylistic issues were found.
-  
+
 As you can see, it's quite a bunch of tools, and quite a bunch of infrastructure. I think it's well worth
 the cost though, and perhaps something which I should have done earlier.
 
-The only thing I was not able to lint was the `Makefile`. There's 
+The only thing I was not able to lint was the `Makefile`. There's
 [some](https://www.reddit.com/r/commandline/comments/1jhwzs/is_there_a_lint_tool_for_checking_makefiles/)
 [solutions](https://www.reddit.com/r/commandline/comments/1jhwzs/is_there_a_lint_tool_for_checking_makefiles/), but
 they're either incomplete, or unmaintained, or simply not do that much. If you know of any, let me know
