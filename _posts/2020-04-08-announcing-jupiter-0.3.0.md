@@ -19,7 +19,7 @@ need to run the `project-create` command, like so:
 
 ```bash
 $ docker run \
-    -it --rm --name jupiter-app -v $(pwd):/data --env TZ=Europe/Bucharest \
+    -it --rm --name jupiter-app -v $(pwd):/data \
     horia141/jupiter:latest project-create \
         my-work \
         --name "My Work"

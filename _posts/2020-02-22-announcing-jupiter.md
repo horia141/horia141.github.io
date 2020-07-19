@@ -63,7 +63,7 @@ Finally, follow the [installation instructions](https://github.com/horia141/jupi
 To init the system you need to do a `jupiter init` like so:
 
 ```bash
-$ docker run -it --rm --name jupiter-app -v $(pwd):/data --env TZ=Europe/Bucharest jupiter init /data/user.yaml
+$ docker run -it --rm --name jupiter-app -v $(pwd):/data jupiter init /data/user.yaml
 [ Some output here ]
 ```
 
@@ -99,7 +99,7 @@ There's a bunch of metadata at the top, of which `key` is the most important. Ne
 To create the project use:
 
 ```bash
-$ docker run -it --rm --name jupiter-app -v $(pwd):/data --env TZ=Europe/Bucharest jupiter create-project /data/user.yaml /data/tasks-work.yaml
+$ docker run -it --rm --name jupiter-app -v $(pwd):/data jupiter create-project /data/user.yaml /data/tasks-work.yaml
 [ Some output here ]
 ```
 
@@ -110,7 +110,7 @@ This will create a bunch of structures in Notion under your plan, looking like s
 Finally, run the `upsert-tasks` command to actually create some of the recurring tasks:
 
 ```bash
-$ docker run -it --rm --name jupiter-app -v $(pwd):/data --env TZ=Europe/Bucharest jupiter upsert-tasks /data/user.yaml /data/tasks-work.yaml
+$ docker run -it --rm --name jupiter-app -v $(pwd):/data jupiter upsert-tasks /data/user.yaml /data/tasks-work.yaml
 [ Some output here ]
 ```
 
