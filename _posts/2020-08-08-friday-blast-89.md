@@ -29,3 +29,4 @@ outcome based goals, to performance calibrations, etc.
 [Common hiring manager mistakes (2020)](https://lethain.com/common-hiring-manager-mistakes/) - designing a proper
 engineering interview s ystem is a _hard thing_. Besides building it, you need to make sure you're not screwing up in
 a bunch of "little" ways - lack of calibration, lack of predefined steps, not getting the data you want, etc.
+************
