@@ -5,7 +5,7 @@ categories: post
 tags: book_review
 comments: true
 math: true
-title: 'Getting To Yes'
+title: 'Getting To Yes Review'
 ---
 This is my review of [Getting To Yes](https://www.amazon.com/Getting-Yes-Negotiating-Agreement-Without/dp/0140157352) by Roger Fisher, William Ury, and Bruce Patton. It’s another book on negotiation, and it’s the second in the series I review, after [Never Split The Difference](./never-split-the-difference-review.md). This is the _original_ which started the whole trend.
 
