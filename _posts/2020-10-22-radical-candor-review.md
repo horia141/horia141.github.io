@@ -7,7 +7,7 @@ comments: true
 math: true
 title: 'Radical Candor Review'
 ---
-This is my review of [Radical Candor](https://www.radicalcandor.com/) by Kim Scott. This is a management book as you can surely surmise. The central idea is that one should practice _radical candor_ in a work environment - a style of interacting with others where one both seeks and offers good and constructive and sometimes hard to hear feedback.0
+This is my review of [Radical Candor](https://www.radicalcandor.com/) by Kim Scott. This is a management book as you can surely surmise. The central idea is that one should practice _radical candor_ in a work environment - a style of interacting with others where one both seeks and offers good and constructive and sometimes hard to hear feedback.
 
 While I found the idea worthy, the book itself felt quite the slog. The message itself is OK, and there's ample storytelling, justification, and instruction around it. But that can only fill so much book. Hence the bigger part of the book deals with general "modern" management approaches. The kind of stuff you can read about in [The Manager's Path](https://horia141.com/the-managers-path-review.html) or [An Elegant Puzzle](https://horia141.com/an-elegant-puzzle-review.html). It's also stuff that I am more or less doing as a manager. Hence my earlier characterization as a slog.
 
