@@ -12,10 +12,6 @@ home_comments: true
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-	<span class="post-meta">
-          <a href="{{ post.url | prepend: site.baseurl}}#disqus_thread" data-disqus-identifier="{{post.id}}">{{ post.title }}</a>
-	</span>
-
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
         </h2>
