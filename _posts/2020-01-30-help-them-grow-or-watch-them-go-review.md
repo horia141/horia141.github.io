@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: '2020-01-30 07:00'
+date: '2021-01-30 07:00'
 categories: post
 tags: friday_blast links
 comments: true
