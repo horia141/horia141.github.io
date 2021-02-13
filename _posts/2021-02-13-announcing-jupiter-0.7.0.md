@@ -2,6 +2,7 @@
 layout: post
 title: "Announcing Jupiter Release 0.7.0"
 categories: post
+date: '2021-02-13 07:00'
 tags: jupiter
 comments: true
 ---
