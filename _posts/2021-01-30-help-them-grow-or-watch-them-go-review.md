@@ -6,7 +6,7 @@ categories: post
 tags: friday_blast links
 comments: true
 math: true
-title: 'Help Them Grow Or Watch Them Go'
+title: 'Help Them Grow Or Watch Them Go Review'
 ---
 This is my review of [Help Them Grow Or Watch Them Grow](https://www.amazon.com/Help-Them-Grow-Watch-Conversations/dp/B00BZD7VR6). This is a management book focused on the _career growth_ aspects of the manager's job. It's a short book, and perhaps not a classic, but it is nonetheless a very worthwhile read and it's had quite the impact on how I approach career conversations and career growth with my team.
 
