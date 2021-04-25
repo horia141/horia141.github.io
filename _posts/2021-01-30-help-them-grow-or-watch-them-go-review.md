@@ -3,7 +3,7 @@ published: true
 layout: post
 date: '2021-01-30 07:00'
 categories: post
-tags: friday_blast links
+tags: book_review
 comments: true
 math: true
 title: 'Help Them Grow Or Watch Them Go Review'
