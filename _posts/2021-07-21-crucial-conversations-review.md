@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: '2021-06-21 07:00'
+date: '2021-07-21 07:00'
 categories: post
 tags: book_review
 comments: true
