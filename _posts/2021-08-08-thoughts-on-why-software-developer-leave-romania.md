@@ -1,7 +1,7 @@
 ---
 published: true
 layout: post
-date: '2021-08-28 07:00'
+date: '2021-08-08 07:00'
 categories: post
 tags: rant
 comments: true
