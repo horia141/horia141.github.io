@@ -6,7 +6,7 @@ categories: post
 tags: career
 comments: true
 math: true
-title: 'Seven Anti-Patterns For Your Job Search'
+title: 'Seven Anti-Patterns For Your Developer Job Search'
 ---
 Over the last year, I’ve reached out to almost 1000 engineers trying to get them to interview for Bolt. I’ve had some 
 success and plenty of failures. **But I have learned a lot about how people approach interviews and career
