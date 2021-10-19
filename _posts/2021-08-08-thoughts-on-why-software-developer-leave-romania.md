@@ -12,7 +12,8 @@ On one of the Romanian developer forums I frequent a familiar question was raise
  Romania? This is a touchy topic here. After the fall of communism in 1989, and more especially after after joining the
   EU in 2007, there has been an exodus of sorts of people from Romania seeking a better life elsewhere. But mostly in the EU, the USA and Canada. This has had a tremendous impact on the country, both good and bad. It's not the place here to explore this, but it's important to note that this discussion is not as simple as it might be for an international audience.
 
-Predictably the thread went into complaining of the many problems in Romania and extolling the virtues of `$theOtherPlace`. Since I've been an expat and now am an ex-expat I do have some opinions. I've shared them on [the forum]([https://devforum.ro/t/de-ce-pleaca-programatorii-romani-afara/15965/68](https://devforum.ro/t/de-ce-pleaca-programatorii-romani-afara/15965/68)), but since I ended up writing quite a bit I also decided to post it on the blog in English.
+Predictably the thread went into complaining of the many problems in Romania and extolling the virtues of
+ `$theOtherPlace`. Since I've been an expat and now am an ex-expat I do have some opinions. I've shared them on [the forum](https://devforum.ro/t/de-ce-pleaca-programatorii-romani-afara/15965/68), but since I ended up writing quite a bit I also decided to post it on the blog in English.
 
 I'll be speaking about *professionals* here - doctors, lawyers, engineers, architects, etc. People who would be doing well locally as well as in another place. But of course, there are other ways of leaving. You can go for unskilled work, as a diplomat, or even for nefarious purposes. I can't claim that the blow applies for these circumstances, as I've no experience with them.
 
