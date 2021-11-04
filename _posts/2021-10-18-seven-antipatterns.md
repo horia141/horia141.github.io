@@ -39,7 +39,7 @@ in compilers, networking, or automotive. **But I got a lot of pushback and even 
 
 But "backend" development is different. It's the place where "business logic" resides. Often, it is not so much about
 the technology as it is about describing the laws that govern the business. As such, any developer can be a backend
-dev! There are still notions of architecting and scaling a system that does require expertise. But that's not a
+dev! There are still notions of architecting and scaling a system that do require expertise. But that's not a
 day-to-day thing. And in general, engineers help by solving problems. Not by knowing technologies or being experts in
 this or that tool. There's great value in mastering tools, but only as a means to solving problems. Knowledge for its
 own sake is an anti-pattern too!
