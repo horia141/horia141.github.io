@@ -114,7 +114,7 @@ Software companies build and sell software. That is, the software itself is the 
 All the others and by far the majority are not software companies. Software acts as an enabler and they still need software developers. Quite a lot sometimes. Examples range from traditional IT in a bank to the software that powers cars. But even ride-sharing companies like Bolt fall into this category in the end.
 
 On paper, as a software engineer, you should join a software company. But in practice, some of the coolest stuff out
-there happens when applying tech to the real world. What you want to search for is companies that have embraced the
+there happens when applying tech to the real world. What you want to search for are companies that have embraced the
 software tech company approach. And subsequently treat engineering like these companies do. And not like some
  secondary concern.
 
@@ -132,7 +132,10 @@ Folks have glamorized working for BigTech, and especially the FAANG companies. T
 
 Working in the headquarters of a company means working closest to where the power center of the company is. Like the CEO or other key execs. If a company is the Roman empire, then the HQ is Rome. Being here has an impact on career progression, choice of projects, etc. But it’s also a very crowded place.
 
-Working in a local hub of a company means working in another office, which is not the HQ, but is close enough. All companies above a certain size have multiple sites. Primarly so they can tap into all the great talent across the world. There are pros and cons in being such a site for an engineer. But the smartest companies know not to limit career growth or access to cool projects.
+Working in a local hub of a company means working in another office, which is not the HQ, but is close enough. All
+ companies above a certain size have multiple sites. Primarily so they can tap into all the great talent across the
+  world. There are pros and cons to being on such a site for an engineer. But the smartest companies know not to
+   limit career growth or access to cool projects.
 
 Working in an outsourcing fashion means working for a separate company. Usually somewhere in a low cost of living
  country. It happens on a project basis de facto. But you're integrated into the bigger company and their teams. It
@@ -148,7 +151,7 @@ Where you work relative to HQ is a much more complex decision here. It ties in w
 # Conclusion
 
 That’s it. You have seven ways to look at the immense variety of software companies. There's more to discuss of
- course. I haven’t covered industry, or locale, or working in “challenging” spaces (AdTech, gambling, adult, etc). But
+ course. I haven’t covered industry, locale, or working in “challenging” spaces (AdTech, gambling, adult, etc). But
   you should now have some new vocabulary to speak about software companies. As well as my take on what the better options are.
 
 What sort of company to pursue depends a lot on you. I have my own biases and abilities which shape my view on the best.
