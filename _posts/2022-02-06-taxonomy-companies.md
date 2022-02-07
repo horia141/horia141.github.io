@@ -88,7 +88,8 @@ Business to consumer (B2C) companies build products for the general public. Thin
 
 Business to business (B2B) companies build products for other businesses. You can then target small and medium companies (SME) or large companies (Enterprise). Think Atlassian or Slack. These companies have a good grasp of their user base. They are sales-driven many times. Work comes out of requests from clients. Or via adopting the new developments of a competitor. Sometimes even major work can come out at the request of a single client.
 
-Business to government (B2B) companies build products for governments or other state-backed entities. Think Palantir or Boeing. These companies should have a very good and deep grasp of their customers. The work itself is very custom to the particular client.
+Business to government (B2G) companies build products for governments or other state-backed entities. Think Palantir
+ or Boeing. These companies should have a very good and deep grasp of their customers. The work itself is very custom to the particular client.
 
 Big enough companies will many times have a B2C and B2B component. And huge companies have all three.
 
@@ -112,7 +113,10 @@ Software companies build and sell software. That is, the software itself is the 
 
 All the others and by far the majority are not software companies. Software acts as an enabler and they still need software developers. Quite a lot sometimes. Examples range from traditional IT in a bank to the software that powers cars. But even ride-sharing companies like Bolt fall into this category in the end.
 
-On paper, as a software engineer, you should join a software company. But in practice, some of the coolest stuff out there happens when applying tech to the real world. What you want to look out for is companies that have embraced the software tech company approach. And subsequently treat engineering like these companies.
+On paper, as a software engineer, you should join a software company. But in practice, some of the coolest stuff out
+there happens when applying tech to the real world. What you want to search for is companies that have embraced the
+software tech company approach. And subsequently treat engineering like these companies do. And not like some
+ secondary concern.
 
 # Big Tech Vs Others
 
