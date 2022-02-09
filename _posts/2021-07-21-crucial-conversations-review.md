@@ -8,7 +8,7 @@ comments: true
 math: true
 title: 'Crucial Conversations Review'
 ---
-This is my review of [Crucial Conversations]([https://www.amazon.com/Crucial-Conversations-Talking-Stakes-Second/dp/1469266822](https://www.amazon.com/Crucial-Conversations-Talking-Stakes-Second/dp/1469266822)). It's a relationships book with a lot of applicability in the workplace. It's a nice read for managers, hence it got on my reading list.
+This is my review of [Crucial Conversations](https://www.amazon.com/Crucial-Conversations-Talking-Stakes-Second/dp/1469266822). It's a relationships book with a lot of applicability in the workplace. It's a nice read for managers, hence it got on my reading list.
 
 I found the book easy to read, like these things tend to be. However, I also found it packed with information. Whereas many other books just recycle the message chapter after chapter, or at most bring small additions, I felt each chapter here brought something valuable. On the other hand, this is what makes the book quite hard to apply in real life. Each chapter is jam packed with a lot of ideas and tools, and practicing and mastering them takes a lot of time. My plan, and the one the authors also recommend, is to acknowledge the big outline of there being *crucial conversations* and they being important, and then practicing one or two techniques 'till I'm comfortable with them. Only after that I'll revisit and try something new.
 
