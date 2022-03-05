@@ -6,7 +6,7 @@ categories: post
 tags: book_review
 comments: true
 math: true
-title: 'No Rules Rules'
+title: 'No Rules Rules Review'
 ---
 This is my review of [No Rules Rules]([https://www.norulesrules.com/](https://www.norulesrules.com/)). This is a book about Netflix and the culture they’ve built over there. The main idea is that their unique culture has allowed them to achieve their extraordinary results. And that this could work for *your company* too. Indeed, among the FAANGM companies, Netflix the most focused, most customer driven, and arguably the one impacting the cultural zeitgeist the most these days. It’s also the smallest of the bunch, which means it punches way above it’s weight class.
 
