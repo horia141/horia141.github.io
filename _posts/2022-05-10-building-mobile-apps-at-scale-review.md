@@ -6,7 +6,7 @@ categories: post
 tags: book_review
 comments: true
 math: true
-title: 'Building Mobile Apps At Scale'
+title: 'Building Mobile Apps At Scale Review'
 ---
 This is my review of [Building Mobile Apps At Scale](https://www.mobileatscale.com/). I wanted to read this
 book to better understand the challenges of building complex mobile apps. My teams have relatively recently
