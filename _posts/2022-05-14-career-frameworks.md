@@ -8,17 +8,23 @@ comments: true
 math: true
 title: 'Career Frameworks'
 ---
-In a previous article in this series, we spoke about the types of software companies. Now it’s time 
-to turn our attention to how these companies organize their workforce. It turns out the tech industry
-has standardized the type and the scope of work engineers do to a large degree.
+In a previous article in this series, we spoke about the 
+[types of software companies](https://horia141.com/taxonomy-companies.html) and [some general strategies
+for your job search](https://horia141.com/seven-antipatterns.html). Now it’s time 
+to turn our attention to how companies organize their workforce. It turns out the tech industry
+has standardized the type and the scope of work engineers do to a large degree. Whether you're
+outside or inside this system, knowing how it works is important when looking at a long term
+career in technology.
 
 The major things we’ll be looking at are _job families_ and _job levels_. Together these form the 
 _career framework_ for an organization. We’ll also look at the concept of dual career tracks.
 
+The Bolt career framework as a sneak peak:
 ![Career tracks](../assets/career-framework.png)
 
 Far from being dry subjects HR or engineering managers worry about, these are very important topics 
-to be aware of as you develop your engineering career.
+to be aware of as you develop your engineering career. The majority of folks working in tech work
+for a company with such a career framework in place, or at least aspirations for it.
 
 I’ll reiterate my assumptions from this series. You’re a software engineer with some years of
 experience. You want to get the most out of your career. You’re based somewhere in Europe, the US, 
@@ -35,7 +41,7 @@ science, or on-the-job learning in a BigTech-type company, such as site reliabil
 
 Choosing a job family is one part plan and one part luck. It starts as early as high school, but 
 needs to become a planned and explicit choice by university. It's of course totally possible to
-change job families. But the more specialized a field is the harder this is. For example, it's a
+change job families. But the more specialized a field is, the harder this is. For example, it's a
 small jump from backend developer to site reliability engineer. Many companies would allow it
 while keeping the same job level. But going to something like a compiler engineer or hardware
 architect is a much larger jump. Without a PhD, you won't even be considered for some of these roles.
@@ -50,7 +56,7 @@ Coming back to our story, job families can be broken down into two classes:
   and creativity.
 * **Managers (EM)**. These are folks responsible for a team or group of teams of engineers. 
 They achieve their work goals through this team. There’s a common distinction between “line managers” 
-who lead a single team, and are very involved with the day-to-day operations of that team,
+who lead a single team, and are very involved with the day-to-day operations of that team, and
  “higher-level managers” who lead a group of teams or whole divisions.
 
 The classification itself, the expectations, and responsibilities are pretty standard for the 
@@ -72,13 +78,14 @@ Where you’ll see variety is mostly around:
 * Project companies tend to have engineering managers focused exclusively on people management, whereas product
  companies tend to have EMs with mixed people, technology, and product responsibilities.
 * Some companies require managers to have a strong engineering background themselves, while others don't. It's rather
- a company-specific thing, but it's also becoming the norm. All big tech and SV-type companies are like this.
+ a company-specific thing, but it's also becoming the norm. All big tech and Silicon Valley-type companies are like
+  this.
 
 # Job Levels #
 
 If job families describe the type of work you’ll be doing, the job level describes roughly the
 expectations of impact, ownership and experience for a person. It is roughly correlated
-with “years of experience” though not quite. As you can imagine job levels are organized in a
+with “years of experience”, though not quite. As you can imagine, job levels are organized in a
 hierarchy - jobs at the bottom have lower overall expectations, while those at the top have higher.
 Similarly, compensation, access to special projects, and a more central position in the organization 
 increase the further you go up this hierarchy.
@@ -96,7 +103,7 @@ I’ve broken down these into three major groups, and listed some common titles 
   lead a team or group of various sizes. Handles people management duties first, and technical ones second.
 
 Across companies, there is some standardization, but it’s much less strong than with job families.
-Where it appears there’s universally some notion of Junior/Midlevel/Senior developer, but higher 
+While it appears there’s universally some notion of Junior/Midlevel/Senior developer, higher 
 levels are where you see the variability. Sometimes the ordering is different, and sometimes the 
 leveling is more discrete.
 
@@ -109,7 +116,8 @@ For example, here’s how some big-name tech companies do this for ICs:
 * Microsoft: SDE, SDE II, Senior SDE, Principal SDE, Partner, Distinguished Engineer, Technical Fellow
 * Bolt: Junior, Middle, Senior, Staff, Senior Staff, Principal
 
-EMs career tracks on the other hand are quite standardized. Though you’ll often see more discrete leveling in larger groups. This is usually attained by adding Senior prefixes to already existing titles.
+EMs career tracks on the other hand are quite standardized, though you’ll often see more discrete leveling in larger
+ groups. This is usually attained by adding Senior prefixes to already existing titles.
 
 Even when titles are the same, there will be some variety around the actual expectations of the role. It’s very company dependent in the end and sometimes there are differences between various departments. In the end, it’s up to the shared understanding folks in the company have about what constitutes performance of a certain kind.
 
@@ -124,20 +132,28 @@ As a final note, higher-level roles are just less numerous. They usually depend 
  
 # Dual Career Tracks #
 
-A very important thing to note is that there’s an implied progression from junior up to Senior. There you can hang on for a long while and there’s generally no pressure to progress. But there’s also the opportunity to try out these higher-level roles or transition towards management. Both are realistically lateral moves, as the kind of work you’ll be doing as a Principal will be quite different than just Senior but two times as fast.
+A very important thing to note is that there’s an implied progression from Junior up to Senior. There you can hang on
+ for a long while and there’s generally no pressure to progress. But there’s also the opportunity to try out these
+  higher-level roles or transition towards management. Both are realistically lateral moves, as the kind of work you’ll be doing as a Principal will be quite different than just Senior, but two times as fast.
 
 What’s good is that there are options. Back in the day, the only career progression option was going into management. It’s still the situation in various pockets of tech and especially for project or outsourcing or “cost center” setups. They might have “architect” roles to bridge the gap, but that’s a different sort of role in the end.
 
-There’s a bunch of historical baggage for why this is like this, up to and including organizations not valuing software engineering work. Before software was eating the world, it was just nibbling a bit at the ends. But where you encounter it’s probably due to a more generic problem that can affect all types of companies — there just isn’t enough complex work to justify this sort of stratification in the organization, which has definite career implications for the long term, as there will be few occasions to learn and apply these skills.
+There’s a bunch of historical baggage for why this is like this, up to and including organizations not valuing 
+software engineering work. Way before software was eating the world, it was nibbling a bit at
+the ends. But more realistically, there's probably not enough work that requires these sorts of
+high-level engineers. This has definite career implications for the long term, as there will be
+few occasions to learn and apply the skills.
 
 It’s very important at interview time to understand if the company you’re speaking with has this dual career track. It’s also important to understand what are the criteria for progression and just how many of these sorts of engineers there are. If there’s one Staff to every 10 Seniors it’s a different story than being one Staff to every 100 Seniors.
 
 # End #
 
-There you go! You should now have a better understanding of these career frameworks companies use for so many things. Even if you want to stay away from this and just do your own thing, being versed in this toolset should hopefully still be useful.
+There you go! You should now have a better understanding of the career frameworks companies use for so many things. Even if you want to stay away from this and just do your own thing, being versed in this toolset should hopefully still be useful.
 
 **When looking at organizations above a certain size, you should be looking for places that have a dual career track
  and where managers are former engineers themselves. In general, you should seek to understand this career framework
   at your current and potential employer.**
 
-Anyway, that’s enough from me. Thank you for reading this far! If I’ve managed to get you excited you should know that Bolt is hiring. We have the dual-career track too, all our managers are engineers and we’re growing like crazy so there are a lot of opportunities to explore that career track. Till next time!
+Anyway, that’s enough from me. Thank you for reading this far! If I’ve managed to get you excited, you should know that
+[Bolt](https://bolt.eu/en/careers/teams/engineering) is hiring. We have the dual-career track too, all our managers are engineers and we’re growing like crazy so
+ there are a lot of opportunities to explore that career track. Till next time!
