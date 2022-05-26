@@ -11,7 +11,9 @@ layout: null
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
-    {% for post in site.posts limit:1000 %}
+    {% assign all_posts = site.posts | concat: site.book_reviews | concat: site.jupiter | concat: site.career %}
+    {% assign all_sorted_posts = all_posts | sort: 'date' | reverse %}
+    {% for post in all_sorted_posts limit:1000 %}
       <item>
         <title>{{ post.title | xml_escape }}</title>
         <description>{{ post.content | xml_escape }}</description>

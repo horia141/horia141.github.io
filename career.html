@@ -1,17 +1,16 @@
 ---
 layout: default
 home_comments: true
-title: "Horia's Blog"
+title: "Career Advice"
 ---
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Career Advice</h1>
 
   <ul class="post-list">
-    {% assign all_posts = site.posts | concat: site.book_reviews | concat: site.jupiter | concat: site.career %}
-    {% assign all_sorted_posts = all_posts | sort: 'date' | reverse %}
-    {% for post in all_sorted_posts %}
+    {% assign all_posts = site.career | sort: 'date' | reverse %}
+    {% for post in all_posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 

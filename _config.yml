@@ -13,5 +13,13 @@ stackoverflow_url: http://stackoverflow.com/users/5910563/horia141
 stackoverflow_username: horia141
 permalink: ":title.html"
 
+collections:
+  book_reviews:
+    output: true
+  jupiter:
+    output: true
+  career:
+    output: true
+
 # Build settings
 markdown: kramdown
