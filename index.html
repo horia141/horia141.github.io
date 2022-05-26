@@ -6,18 +6,31 @@ title: "Horia's Blog"
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">All Posts</h1>
 
   <ul class="post-list">
     {% assign all_posts = site.posts | concat: site.book_reviews | concat: site.jupiter | concat: site.career %}
     {% assign all_sorted_posts = all_posts | sort: 'date' | reverse %}
     {% for post in all_sorted_posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">
+
+          {{ post.date | date: "%b %-d, %Y" }}
+
+          <ul class="tags">
+            {% for tag in post.tags %}
+            <li>#{{ post.tags }}</li>
+            {% endfor %}
+          </ul>
+
+        </span>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
         </h2>
+
+        {{ post.excerpt }}
+
       </li>
     {% endfor %}
   </ul>

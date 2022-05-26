@@ -12,11 +12,24 @@ title: "Book Reviews"
     {% assign all_posts = site.book_reviews | sort: 'date' | reverse %}
     {% for post in all_posts %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <span class="post-meta">
+
+          {{ post.date | date: "%b %-d, %Y" }}
+
+          <ul class="tags">
+            {% for tag in post.tags %}
+            <li>#{{ post.tags }}</li>
+            {% endfor %}
+          </ul>
+
+        </span>
 
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl}}">{{ post.title }}</a>
         </h2>
+
+        {{ post.excerpt }}
+
       </li>
     {% endfor %}
   </ul>

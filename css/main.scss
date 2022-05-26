@@ -72,3 +72,24 @@ td{
     padding-right: 8px;
     min-width: 32px;
 }
+
+/* Tags lists */
+
+ul.tags {
+    display: contents;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+ul.tags li {
+    display: inline-block;
+    color: #39739d;
+    background-color: #e1ecf4;
+    border-color: #e1ecf4;
+    margin: 2px 2px 2px 0;
+    padding: 4px 5px 5px;
+    line-height: 1;
+    border-width: 1px;
+    border-style: solid;
+    white-space: nowrap;
+}
