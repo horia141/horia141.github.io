@@ -3,7 +3,7 @@ published: true
 layout: post
 date: '2022-05-22 07:00'
 categories: post
-tags: career
+tags: career managers
 comments: true
 math: true
 title: 'My Suggested Reading For Managers & Tech Leads'
