@@ -11,10 +11,10 @@ title: 'The Notion Of Teams'
 **Teams and team formation are a fundamental part of any organization. But getting them right is far from trivial. And
  there are a lot of ways to mess things up. So it's important to have a "correct" definition for them.**
  
-In my time at Bolt, I’ve been involved with managing, bootstrapping, and reorganizing my fair share of teams. 
-I made all the mistakes. To save others from doing so I’ve written several internal guides. Now I’m adapting and 
-publishing them for a wider audience. I believe the lessons are _theoretically sound_ and should apply across 
-companies and industries. Like the previous post on
+In my time at [Bolt](https://careers.bolt.eu), I’ve been involved with managing, bootstrapping, and reorganizing my fair
+share of teams. I made _all_ the mistakes. To save others from doing so I’ve written several internal guides. Now I’m
+adapting and publishing them for a wider audience. I believe the lessons are _theoretically sound_ and should apply
+across  companies and industries. Like the previous post on
 [reading lists](../career/2022-05-22-my-suggested-reading), this one is geared towards a
 manager audience. **Nevertheless, working in a badly set up team is a world of difference from working in a well set
 up one.** Hence even as an individual contributor, this knowledge is useful. You’ll know what to look for and what to
