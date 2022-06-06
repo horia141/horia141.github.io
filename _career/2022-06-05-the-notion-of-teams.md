@@ -192,9 +192,9 @@ topic and we’re still not in a place where we’ve mastered this as an industr
 
 Here are some references for further reading: 
 
-* [Peopleware](../_book_reviews/2019-04-20-peopleware-review.md)
+* [Peopleware](https://horia141.com/book_reviews/2019-04-20-peopleware-review)
 * [Inspired](https://svpg.com/inspired-how-to-create-products-customers-love/)
-* [Team Topologies](../_book_reviews/2021-04-25-team-topologies-review.md)
+* [Team Topologies](https://horia141.com/book_reviews/2021-04-25-team-topologies-review)
 * [Autonomy Without Chaos](https://www.youtube.com/watch?v=RKgZmHhSD9I&list=WL&index=2)
 * [Transform Engineering Culture Without Losing Control](https://www.youtube.com/watch?v=HGf5oTD4Buc&list=WL&index=3&t=619s)
 * [Team Topologies Talk](https://www.youtube.com/watch?v=haejb5rzKsM&t=1268s)
