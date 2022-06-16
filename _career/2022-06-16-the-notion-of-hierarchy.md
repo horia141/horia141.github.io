@@ -1,3 +1,5 @@
+---
+published: true
 layout: post
 date: '2022-06-16 07:00'
 categories: post
