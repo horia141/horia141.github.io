@@ -37,6 +37,6 @@ issues at succession time.
 
 There is also the classic "Peacetime CEO / Wartime CEO" piece. Which splits company "situations" into
 peacetime (owning the majority of a large market), and wartime (anything). These require different
-leadership skills, and these are mostly exclusive.
+leadership skills, and are mostly exclusive.
 
 Anyway, this was my bit. Go read the book. It's well worth it.
