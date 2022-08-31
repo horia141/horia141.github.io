@@ -50,6 +50,8 @@ Managers of a single team should take a special look at these titles.
 * [Peopleware](https://horia141.com/peopleware-review.html) - teams are the unit of building software, and happy 
  and gelled teams are the unit of building software effectively. This book is all about that, plus a lot more about
  interviewing, development processes, etc.
+* [Managing Humans](https://horia141.com/book_reviews/2022-08-08-managing-humans-review) - anecdotes and war stories
+ from the author's long and storied career. A lot of tactical lessons here, but all well worth having in your arsenal.
 * [Help Them Grow Or Watch Them Go](https://horia141.com/help-them-grow-or-watch-them-go-review.html) - a very short 
  book on career conversations with your teammates, and how to be active and proactive in their career journeys.
 * [Radical Candor](https://horia141.com/radical-candor-review.html) - a book about providing (and receiving) feedback
