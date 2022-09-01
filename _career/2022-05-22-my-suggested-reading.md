@@ -60,9 +60,6 @@ Managers of a single team should take a special look at these titles.
 * [Crucial Conversations](https://horia141.com/crucial-conversations-review.html) - crucial conversations are
  discussions with high-stakes and differing views on the right outcomes. A constant occurrence for leaders! This book
  teaches one how to navigate these difficult conversations in an effective way, achieve win-win solutions for everyone.
-* [Managing Humans](https://horia141.com/book_reviews/2022-08-08-managing-humans-review) - a book primarily focused on the people management
-  aspects of being a manager. Chock full of tactical advice ranging from how to run a meeting, to what
-  triggers folks to leave and what you can do to engage them.
 
 # L2 Managers Reading. 
 
