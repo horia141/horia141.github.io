@@ -3,7 +3,7 @@ published: true
 layout: post
 date: '2023-01-30 07:00'
 categories: post
-tags: career
+tags: career management tutorial
 comments: true
 math: true
 title: 'Job Of A Manager'
