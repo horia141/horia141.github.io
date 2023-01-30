@@ -61,7 +61,7 @@ Managers of a single team should take a special look at these titles.
  discussions with high-stakes and differing views on the right outcomes. A constant occurrence for leaders! This book
  teaches one how to navigate these difficult conversations in an effective way, achieve win-win solutions for everyone.
 
-# L2 Managers Reading. 
+# L2 Managers Reading
 
 Managers of multiple teams and of other managers should take a special look at these titles, besides the L1 
 reading section.
