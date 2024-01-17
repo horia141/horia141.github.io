@@ -35,7 +35,7 @@ cargo-culting will lead to trouble, no matter how great the product or team is.
 migrations, and operational readiness at Stripe as a result.
 Bolt was no slouch either, with a great track record of availability. 
 But this was mostly an emergent behaviour of the work we were doing, not an intentional business decision. 
-Put another way, an one hour outage would not be the end of the world at Bolt, and we’d take it as an unfortunate but unavoidable event.
+Put another way, a one hour outage would not be the end of the world at Bolt, and we’d take it as an unfortunate but unavoidable event.
 At Stripe it would result in significant course corrections to make sure it would never happen again. 
 
 **Efficiency was not a focus for Stripe until very recently**. Growth was the main focus historically. 2023 changed it to sustainable growth,
