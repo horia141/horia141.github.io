@@ -29,9 +29,14 @@ Goes without saying that this is my opinion, not Stripe’s.
 Ditto, these different approaches are not good or bad in themselves. Choosing things appropriately in a given context is a super-power, while 
 cargo-culting will lead to trouble, no matter how great the product or team is.
 
-**Stripe is a engineering-focused, while Bolt is engineering-supported**. The product is technology-driven, the clients are typically tech-savvy companies, and a major portion of the workforce consists of engineers. On the other hand, Bolt operates in the physical world, dealing with tangible objects rather than digital information. While Bolt still requires a strong engineering team to operate on a large scale, engineering plays a smaller role in the overall workforce. To illustrate this difference, an apt metaphor would be that at Stripe, technology takes the lead in decision-making, while at Bolt, it plays a supportive role.
+**Stripe is a bigger place**. Total HC is the same, but engineering is roughly order of magnitude bigger than Bolt. In both cases it seems there's too much work
+for the folks we have, and we have to aggresively prioritize things. But you can wander much more through various types of projects here before you
+get to explore _everything_. There are folks working on programming language infra, or on low-level OS development, in security, and of course
+in the myriad products we have. There are downsides to size too, but that's again the topic of another post.
 
-**Stripe is much more focused on high availability and operational rigor**. There’s a great deal of importance given to KTLO work, 
+**Stripe is engineering-focused, while Bolt is engineering-supported**. The product is technology-driven, the clients are typically tech-savvy companies, and a major portion of the workforce consists of engineers. On the other hand, Bolt operates in the physical world, dealing with tangible objects rather than digital information. While Bolt still requires a strong engineering team to operate on a large scale, engineering plays a smaller role in the overall workforce. To illustrate this difference, an apt metaphor would be that at Stripe, technology takes the lead in decision-making, while at Bolt, it plays a supportive role. As a side-point, at Bolt we tended to lean a lot on product folks to bridge the gap to the business, whereas at Stripe engineering is exposed to and driving this business part more often than not. It's unclear to me if this is simply specific to Stripe or to SV-type companies or to all tech-driven companies.
+
+**Stripe is much more focused on high availability and operational rigor**. There’s a great deal of importance given to keep-the-lights-on work, 
 migrations, and operational readiness at Stripe as a result.
 Bolt was no slouch either, with a great track record of availability. 
 But this was mostly an emergent behaviour of the work we were doing, not an intentional business decision. 
@@ -41,7 +46,7 @@ At Stripe it would result in significant course corrections to make sure it woul
 **Efficiency was not a focus for Stripe until very recently**. Growth was the main focus historically. 2023 changed it to sustainable growth,
 like it did for the rest of the industry. Bolt on the other hand was efficiency-minded from the start and ran a very tight ship.
 We tended to move a bit slower, but rarely had to come back to systems to make them scale or make them more efficient.
-Metaphorically, Stripe merely adopted the dark, but Bolt was born into it.
+As [Bane put it](https://www.youtube.com/watch?v=F157geaXp_w), Stripe merely adopted the dark, but Bolt was born into it.
 
 **Bonus - Stripe loves acryonyms and codenames**. Seems like every team, project, or program has its own codename. Makes it easy to
 speak about `project turnip` instead of `migration to new storage format that somehow has implications for accounting`. But it
