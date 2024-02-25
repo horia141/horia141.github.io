@@ -10,7 +10,7 @@ title: 'Three Frameworks For Your 45 Year Career'
 ---
 This is the third post I’m making this year. Couple more and I can mark this new year’s resolution as done 🚀. For the rest of the year I want to zoom in on career development for software engineers and managers. I’ve thought a lot about this at an individual scale for both myself and for the folks I’ve been lucky to have on my team. And even on the scale of a whole organization for Bolt, while designing systems and processes around career journeys.
 
-If you’re somebody who cares about their career and wants to have a goon one, I hope you’re going to find this useful.
+If you’re somebody who cares about their career and wants to have a good one, I hope you’re going to find this useful.
 
 Now, a career is a big thing! It can take 40-50 years to fully unfold at the macro scale, and takes up a significant part of your day-to-day focus at the micro scale! There’s no right or comprehensive way of thinking about it. But I’ve found there are some particularly useful *mental models* that, when taken together, provide a good scaffolding for all other work. For starters, I’ll cover three big mental models or frameworks that look at the software engineering career in broad and decade long chunks. In a future post I’ll speak about mental models that focus on smaller chunks such as a particular job, role, or project!
 
